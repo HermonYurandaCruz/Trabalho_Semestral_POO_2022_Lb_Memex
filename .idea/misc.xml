@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/boxnavegacaohome.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixa_amarela.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixaamarela.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixatransparente.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/ic_curtida.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_tela_login.xml" value="0.209375" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_memeiros.xml" value="0.209375" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_notificaoess.xml" value="0.209375" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_perfil.xml" value="0.209375" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_ranking.xml" value="0.209375" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/menu/navegarmemex.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

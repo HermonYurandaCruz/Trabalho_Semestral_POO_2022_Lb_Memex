@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CaixaNevegacao">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:radius">20dp</item>
+        <item name="android:background">@drawable/boxnavegacaohome</item>
+
+    </style>
+    <style name="CaixaPesquisa">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:radius">20dp</item>
+        <item name="android:background">@drawable/boxnavegacaohome</item>
+
+    </style>
+
+
+
+</resources>
