@@ -5,22 +5,127 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TelaLogin"
-    android:background="@color/amarelo">
-<TextView
-    android:id="@+id/MemeX"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="MemeX"
-    android:textSize="36sp"
-    android:textColor="@color/white"
-    android:fontFamily="serif"
-    app:layout_constraintStart_toStartOf="parent"
+    android:background="@color/white">
+<ImageView
+    android:id="@+id/memeLogo"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:src="@drawable/memelogo"
     app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    android:layout_marginTop="70dp"/>
+    android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/usuarioLogin"
+        style="@style/TextoLogin"
+        android:hint="Usuario:"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/memeLogo"
+        />
+    <EditText
+        android:id="@+id/senhaLogin"
+        style="@style/TextoLogin"
+        android:hint="Senha:"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usuarioLogin"
+        />
+
+    <TextView
+        android:id="@+id/tv_esquecu_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:fontFamily="serif"
+        android:text="Esqueceu a sua senha???"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/senhaLogin"
+        android:layout_marginTop="10dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_login"
+        android:layout_width="200dp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_height="30dp"
+        android:textSize="12sp"
+        android:text="@string/Entrar"
+        android:textColor="@color/white"
+style="@style/BotaoEntrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_esquecu_senha"/>
+    <TextView
+        android:id="@+id/tv_criar_conta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar uma conta..."
+        android:textSize="12sp"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_login"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/tv_ou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ou"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_criar_conta"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_loginFB"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:fontFamily="serif"
+        android:textSize="13sp"
+        android:text="  Continuar com facebook    "
+        android:drawableLeft="@drawable/facebook"
+        android:textColor="@color/white"
+        style="@style/BotaoFaceboook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ou"
 
         />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_loginTwiter"
+        style="@style/BotaoTwiter"
+        android:fontFamily="serif"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:drawableLeft="@drawable/twitter"
+        android:text="  Continuar com Twiter          "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_loginFB"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

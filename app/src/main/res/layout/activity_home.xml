@@ -16,15 +16,18 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navegarmemex"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+
         />
+
     <FrameLayout
+        android:id="@+id/conteinernavagation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/conteinernavagation"
-        app:layout_constraintBottom_toTopOf="@id/bottonNavigation"/>
+        app:layout_constraintBottom_toTopOf="@id/bottonNavigation"
+      />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

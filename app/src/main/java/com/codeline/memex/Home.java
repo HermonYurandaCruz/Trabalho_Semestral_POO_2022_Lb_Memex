@@ -29,7 +29,7 @@ BottomNavigationView bottomNavigationView;
 
     RankingFragment rankingFragment=new RankingFragment();
     NotificaoessFragment notificaoessFragment=new NotificaoessFragment();
-    DefinicoesFragment definicoesFragment=new DefinicoesFragment();
+
 
 
 
@@ -46,10 +46,6 @@ BottomNavigationView bottomNavigationView;
                 getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,memeirosFragment).commit();
                 return true;
 
-
-            case R.id.definicoes:
-                getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,definicoesFragment).commit();
-                return true;
 
             case R.id.ranking:
                 getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,rankingFragment).commit();

@@ -18,10 +18,6 @@
         android:icon="@drawable/notificacoes"
         />
 
-    <item android:id="@+id/definicoes"
-        android:title="Definições"
-        android:icon="@drawable/definicoes"
-        />
 
 
 

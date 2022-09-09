@@ -7,7 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="amarelo">#f4d523</color>
+    <color name="amarelo">#fce501</color>
+    <color name="amarelo2">#FFFF00</color>
+    <color name="amarelo3">#DEFF1C</color>
+    <color name="cinza">#778088</color>
+    <color name="azulfacebook">#1976d2</color>
+    <color name="azul_twiter">#3ea1ec</color>
 
 
 </resources>
