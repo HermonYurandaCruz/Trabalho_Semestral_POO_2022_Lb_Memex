@@ -10,9 +10,17 @@
     <style name="CaixaPesquisa">
         <item name="android:layout_width">match_parent</item>
         <item name="android:radius">20dp</item>
-        <item name="android:background">@drawable/boxnavegacaohome</item>
+        <item name="android:background">@drawable/caixa_pesquisa</item>
 
     </style>
+    <style name="follow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:radius">20dp</item>
+        <item name="android:background">@drawable/follow</item>
+
+    </style>
+
+
     <style name="barraCriacao">
         <item name="android:layout_width">match_parent</item>
         <item name="android:radius">20dp</item>
