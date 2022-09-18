@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemeX">
         <activity
-            android:name=".login"
+            android:name=".TelaCriarConta"
             android:exported="false" />
         <activity
             android:name=".Home"

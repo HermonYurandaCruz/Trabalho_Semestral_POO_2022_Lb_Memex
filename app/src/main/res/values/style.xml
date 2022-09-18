@@ -3,14 +3,15 @@
 
     <style name="CaixaNevegacao">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:radius">20dp</item>
-        <item name="android:background">@drawable/boxnavegacao</item>
+
 
     </style>
     <style name="CaixaPesquisa">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:radius">20dp</item>
-        <item name="android:background">@drawable/boxnavegacaohome</item>
+
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:background">@drawable/caixa_pesquisar</item>
+
 
     </style>
     <style name="barraCriacao">
@@ -19,10 +20,10 @@
         <item name="android:background">@drawable/barra_criacao</item>
 
     </style>
-    <style name="criar">
+    <style name="publicacao">
         <item name="android:layout_width">match_parent</item>
         <item name="android:radius">20dp</item>
-        <item name="android:background">@drawable/circulo_criacao</item>
+        <item name="android:background">@drawable/caixa_publicacao</item>
 
     </style>
 
@@ -34,29 +35,28 @@
         <item name="android:maxLength">25</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginLeft">40dp</item>
-        <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_marginBottom">20dp</item>
     </style>
 
     <style name="BotaoEntrar">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">40dp</item>
         <item name="android:layout_marginLeft">40dp</item>
-        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginTop">20dp</item>
         <item name="android:background">@drawable/botao</item>
+
 
 
     </style>
 
 
-    <style name="BotaoFaceboook">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">55dp</item>
-        <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginLeft">40dp</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:background">@drawable/botaofacebook</item>
+    <style name="BotaoFallow">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">30dp</item>
+
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@drawable/botaofallow</item>
 
 
     </style>
@@ -69,6 +69,18 @@
         <item name="android:background">@drawable/botaotwiter</item>
 
 
+    </style>
+
+
+    <style name="Pesquisa">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/caixa_pesquisar</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
     </style>
 
 </resources>

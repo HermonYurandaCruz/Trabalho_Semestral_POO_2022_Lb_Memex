@@ -1,265 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<TextView
-    android:id="@+id/Tv_pesquisa"
-    android:layout_width="200dp"
-    android:layout_height="25dp"
-    android:layout_marginTop="30dp"
-    android:layout_marginEnd="40dp"
-    android:text="pesquisar"
-    android:textAlignment="center"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_pesquisar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/Tv_pesquisa"
-      android:layout_marginTop="30dp"
-
-        />
 
 
+        <TextView
+            android:id="@+id/tv_publicacoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Publicações"
+            android:textStyle="bold"
+            android:textColor="@color/lilas3"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_criar_meme"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_criar_meme"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/et_pesquisar"
+            style="@style/Pesquisa"
+            android:layout_marginTop="10dp"
+            android:hint="  Pesquisar"
+            android:inputType="text"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:drawableRight="@drawable/ic_pesquisar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_publicacoes" />
+
+        <ImageView
+            android:id="@+id/iv_perfil_publicacao"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/foto_padrao_perfil"
+            app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/publicado"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="20dp"
+
+            />
+        <TextView
+            android:id="@+id/tv_usuario_publicacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amana Bacar"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
+            app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
+            app:layout_constraintBottom_toTopOf="@id/publicado"
+            android:layout_margin="10dp"
+            />
+        <TextView
+                android:id="@+id/tv_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="Data: 14/09/2022   17:33H"
+            app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
+            app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
+            app:layout_constraintBottom_toTopOf="@id/publicado"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+
+            />
 
 
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/BotaoFallow"
+            android:gravity="center"
+            android:hint="Seguir"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/publicado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
+            android:layout_marginEnd="40dp"
+            />
+
+        <View
+            android:id="@+id/publicado"
+            style="@style/publicacao"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_pesquisar" />
 
 
+        <ImageView
+            android:id="@+id/tv_reagir_meme"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/reagir_meme"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/publicado"/>
 
+        <ImageView
+            android:id="@+id/tv_comentar_meme"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reagir_meme"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/comentar_meme"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/publicado"/>
 
+        <ImageView
+            android:id="@+id/tv_enviar_meme"
+            android:layout_width="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_comentar_meme"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/enviar"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/publicado"/>
 
-    <ImageView
-        android:id="@+id/Iv_post2"
-        android:layout_width="350dp"
-        android:layout_height="270dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="10dp"
-        style="@style/CaixaPesquisa"
-        app:layout_constraintTop_toBottomOf="@id/Iv_post"
-        android:layout_marginTop="55dp"
-        />
-    <ImageView
-        android:id="@+id/Iv_curtida2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_curtida"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_post"
-        android:layout_marginTop="80dp"
+        <ImageView
 
-        />
-    <ImageView
-        android:id="@+id/Iv_comentar2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_comentarios"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_curtida2"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Enviar2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_share_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_comentar2"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Reclamacao2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_error_outline_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_Enviar2"
-        android:layout_marginTop="20dp"
-
-        />
-
-
-    <ImageView
-        android:id="@+id/Iv_post"
-        android:layout_width="350dp"
-        android:layout_height="270dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="20dp"
-        style="@style/CaixaPesquisa"
-        app:layout_constraintTop_toBottomOf="@id/Tv_pesquisa"
-        android:layout_marginTop="55dp"
-        />
-    <ImageView
-        android:id="@+id/Iv_curtida"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_curtida"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Tv_pesquisa"
-        android:layout_marginTop="80dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_comentar"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_comentarios"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_curtida"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Enviar"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_baseline_share_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_comentar"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Reclamacao"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_baseline_error_outline_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_Enviar"
-        android:layout_marginTop="20dp"
-
-        />
-
-
-
-
-
-
-
-
-    <ImageView
-        android:id="@+id/Iv_post3"
-        android:layout_width="350dp"
-        android:layout_height="270dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="10dp"
-        style="@style/CaixaPesquisa"
-        app:layout_constraintTop_toBottomOf="@id/Iv_post2"
-        android:layout_marginTop="55dp"
-        />
-    <ImageView
-        android:id="@+id/Iv_curtida3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_curtida"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_post2"
-        android:layout_marginTop="80dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_comentar3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_comentarios"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_curtida3"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Enviar3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_share_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_comentar3"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Reclamacao3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_error_outline_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_Enviar3"
-        android:layout_marginTop="20dp"
-
-        />
+            android:layout_width="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="20dp"
+            android:id="@+id/tv_notificar_publicaoes_meme"
+            app:layout_constraintTop_toBottomOf="@id/tv_enviar_meme"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/notificar"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/publicado"/>
 
 
 
 
 
 
-
-    <ImageView
-        android:id="@+id/Iv_post4"
-        android:layout_width="350dp"
-        android:layout_height="270dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="10dp"
-        style="@style/CaixaPesquisa"
-        app:layout_constraintTop_toBottomOf="@id/Iv_post3"
-        android:layout_marginTop="55dp"
-        />
-    <ImageView
-        android:id="@+id/Iv_curtida4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_curtida"
-        app:layout_constraintStart_toEndOf="@id/Iv_post4"
-        app:layout_constraintTop_toBottomOf="@id/Iv_post3"
-        android:layout_marginTop="80dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_comentar4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_comentarios"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_curtida4"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Enviar4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_share_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_comentar4"
-        android:layout_marginTop="20dp"
-
-        />
-    <ImageView
-        android:id="@+id/Iv_Reclamacao4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_baseline_error_outline_24"
-        app:layout_constraintStart_toEndOf="@id/Iv_post"
-        app:layout_constraintTop_toBottomOf="@id/Iv_Enviar4"
-        android:layout_marginTop="20dp"
-
-        />
 
 
 
@@ -270,4 +174,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

@@ -10,9 +10,14 @@
     <color name="amarelo">#fce501</color>
     <color name="amarelo2">#FFFF00</color>
     <color name="amarelo3">#DEFF1C</color>
-    <color name="cinza">#778088</color>
+    <color name="cinza">#dcdcdcdc</color>
     <color name="azulfacebook">#1976d2</color>
     <color name="azul_twiter">#3ea1ec</color>
-
+    <color name="lilas">#6537A3</color>
+    <color name="lilas2">#5E32A7</color>
+    <color name="lilas3">#664198</color>
+    <color name="vermelho">#e60000</color>
+    #FB7D09
+    #FF891C
 
 </resources>

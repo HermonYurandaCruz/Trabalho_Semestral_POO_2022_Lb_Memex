@@ -13,12 +13,10 @@
         android:id="@+id/bottonNavigation"
         android:layout_width="match_parent"
         style="@style/CaixaNevegacao"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navegarmemex"
-        android:layout_marginBottom="6dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+
 
         />
 
@@ -27,6 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@id/bottonNavigation"
+        android:layout_marginBottom="55dp"
       />
 
 

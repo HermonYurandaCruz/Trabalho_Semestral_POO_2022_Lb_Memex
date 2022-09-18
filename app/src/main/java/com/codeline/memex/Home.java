@@ -26,6 +26,7 @@ BottomNavigationView bottomNavigationView;
     }
     HomeFragment homeFragment=new HomeFragment();
     MemeirosFragment memeirosFragment=new MemeirosFragment();
+    SettingFragment settingFragment=new SettingFragment();
 
     RankingFragment rankingFragment=new RankingFragment();
     NotificaoessFragment notificaoessFragment=new NotificaoessFragment();
@@ -53,6 +54,10 @@ BottomNavigationView bottomNavigationView;
 
             case R.id.notificacoes:
                 getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,notificaoessFragment).commit();
+                return true;
+
+            case R.id.setting:
+                getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,settingFragment).commit();
                 return true;
         }
         return false;
