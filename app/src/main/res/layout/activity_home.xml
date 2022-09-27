@@ -6,9 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
-
-
-    app:layout_constraintBottom_toBottomOf="parent"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottonNavigation"
         android:layout_width="match_parent"
@@ -16,7 +13,6 @@
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navegarmemex"
-
 
         />
 

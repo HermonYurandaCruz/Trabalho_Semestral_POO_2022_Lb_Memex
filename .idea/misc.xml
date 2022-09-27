@@ -24,13 +24,15 @@
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_login.xml" value="0.209375" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_tela_criar_conta.xml" value="0.1" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_tela_criar_conta.xml" value="0.5" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/activity_tela_login.xml" value="0.25" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_memeiros.xml" value="0.209375" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_memeiros.xml" value="0.25" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_notificaoess.xml" value="0.209375" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_perfil.xml" value="0.209375" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_ranking.xml" value="0.209375" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_seguindo.xml" value="0.1718683197947841" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_seguir.xml" value="0.1718683197947841" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/menu/navegarmemex.xml" value="0.209375" />
       </map>
     </option>
