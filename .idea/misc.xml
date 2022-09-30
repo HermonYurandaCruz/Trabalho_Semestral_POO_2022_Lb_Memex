@@ -6,16 +6,20 @@
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/barra_criacao.xml" value="0.109" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/botao.xml" value="0.157" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/botaofacebook.xml" value="0.1535" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/botaofallow.xml" value="0.159" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/botaosair.xml" value="0.116" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/botaotwiter.xml" value="0.1535" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/boxnavegacao.xml" value="0.1985" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/boxnavegacaohome.xml" value="0.1545" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixa_amarela.xml" value="0.1545" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixa_pesquisa.xml" value="0.159" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixa_pesquisar.xml" value="0.164" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixaamarela.xml" value="0.1545" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixatexto.xml" value="0.18" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/caixatransparente.xml" value="0.1545" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/circulo_criacao.xml" value="0.109" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/follow.xml" value="0.13" />
+        <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.159" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.1545" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/ic_curtida.xml" value="0.1545" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/ic_definicoes.xml" value="0.1565" />
@@ -34,10 +38,19 @@
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_seguindo.xml" value="0.1718683197947841" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/layout/fragment_seguir.xml" value="0.1718683197947841" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/menu/navegarmemex.xml" value="0.209375" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/drawable/botao.xml" value="0.1945" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/drawable/botao_follow.xml" value="0.127" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/drawable/caixa_pesquisa.xml" value="0.1945" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/drawable/folow.xml" value="0.1945" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.127" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/drawable/ic_pesquisar.xml" value="0.1945" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
+        <entry key="..\:/Users/dell/Desktop/memex/Memex/app/src/main/res/layout/fragment_memeiros.xml" value="0.3103448275862069" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
