@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".NovoContratoCliente">
+
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/foto"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:src="@drawable/hermon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/white"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_nomeUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Hermon Yuran da Cruz"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foto"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_seguir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="A seguir"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario"
+            android:layout_marginStart="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_seguir"
+            android:layout_marginStart="50dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_numeroDePostagens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Posts"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_numeroDePostagens" />
+
+        <TextView
+            android:id="@+id/tv_seguidores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Seguidores"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario"
+            android:layout_marginEnd="50dp"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_seguidores"
+            android:layout_marginEnd="50dp"
+            />
+
+        <TextView
+            android:id="@+id/Top3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top 3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_seguir"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/lilas"
+            android:fontFamily="sans-serif-condensed-medium"
+            />
+        <ImageView
+            android:id="@+id/iv_top1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Top3"
+            android:layout_margin="20dp"
+            android:background="@color/lilas"
+            />
+        <ImageView
+            android:id="@+id/iv_top2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toEndOf="@id/iv_top1"
+            app:layout_constraintTop_toBottomOf="@id/Top3"
+            android:layout_margin="20dp"
+            android:background="@color/black"
+            />
+        <ImageView
+            android:id="@+id/iv_top3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toEndOf="@id/iv_top2"
+            app:layout_constraintTop_toBottomOf="@id/Top3"
+            android:layout_margin="20dp"
+            android:background="@color/amarelo3"
+            />
+
+        <ImageView
+            android:id="@+id/iv_perfil_publicacao"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/foto_padrao_perfil"
+            app:layout_constraintTop_toBottomOf="@id/iv_top1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="21dp"
+            android:layout_marginStart="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_usuario_publicacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="36dp"
+            android:text="Amana Bacar"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
+            app:layout_constraintTop_toBottomOf="@id/iv_top1" />
+
+
+        <TextView
+            android:id="@+id/tv_Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="Data: 14/09/2022   17:33H"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@id/publicado"
+            app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
+
+            />
+
+        <View
+            android:id="@+id/publicado"
+            style="@style/publicacao"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_perfil_publicacao" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/conteinerPerfil"
+            />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>

@@ -40,7 +40,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/usuarioLogin"
         style="@style/TextoLogin"
         android:hint="Usuario"
-        android:textColorHint="@color/lilas"
+        android:drawableRight="@drawable/ic_perfil"
         android:layout_marginTop="55dp"
         android:textSize="16sp"
         android:textStyle="normal"
@@ -53,8 +53,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/senhaLogin"
         style="@style/TextoLogin"
         android:hint="Senha"
-        android:textColorHint="@color/lilas"
         android:inputType="textPassword"
+        android:drawableRight="@drawable/ic_senha"
         android:textSize="16sp"
         android:layout_marginTop="25dp"
         android:textStyle="normal"
@@ -152,6 +152,6 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

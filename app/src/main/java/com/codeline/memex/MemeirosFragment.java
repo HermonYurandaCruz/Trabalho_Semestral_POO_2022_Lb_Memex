@@ -51,6 +51,7 @@ public class MemeirosFragment extends Fragment {
             Fragment seguindoFragment=new SeguindoFragment();
             FragmentTransaction transactionSeguindo=getChildFragmentManager().beginTransaction();
             transactionSeguindo.add(R.id.conteinerMemeiros,seguindoFragment).commit();
+
         }
     });
 

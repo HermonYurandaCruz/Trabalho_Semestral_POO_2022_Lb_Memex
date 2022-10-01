@@ -11,7 +11,10 @@
     tools:context=".HomeFragment">
 
 
-
+<FrameLayout
+    android:id="@+id/conteinerHomefragmente"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
         <TextView
             android:id="@+id/tv_publicacoes"
             android:layout_width="wrap_content"
@@ -91,6 +94,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_seguir_publicacao"
             style="@style/BotaoFallow"
             android:gravity="center"
             android:hint="Seguir"

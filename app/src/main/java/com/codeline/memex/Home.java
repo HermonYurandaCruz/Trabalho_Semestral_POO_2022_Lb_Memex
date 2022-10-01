@@ -3,14 +3,18 @@ package com.codeline.memex;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 BottomNavigationView bottomNavigationView;
+TextView tv_usuarioPublicacao;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +28,12 @@ BottomNavigationView bottomNavigationView;
 
         getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,homeFragment);
 
+
     }
     HomeFragment homeFragment=new HomeFragment();
     MemeirosFragment memeirosFragment=new MemeirosFragment();
     SettingFragment settingFragment=new SettingFragment();
+
 
     RankingFragment rankingFragment=new RankingFragment();
     NotificaoessFragment notificaoessFragment=new NotificaoessFragment();
@@ -60,7 +66,11 @@ BottomNavigationView bottomNavigationView;
             case R.id.setting:
                 getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,settingFragment).commit();
                 return true;
-        }
+
+      }
         return false;
+
     }
+
+
 }
