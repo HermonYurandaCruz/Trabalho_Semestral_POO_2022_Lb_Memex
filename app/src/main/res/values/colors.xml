@@ -10,6 +10,7 @@
     <color name="amarelo">#fce501</color>
     <color name="amarelo2">#FFFF00</color>
     <color name="amarelo3">#DEFF1C</color>
+<<<<<<< HEAD
     <color name="cinza">#dcdcdcdc</color>
     <color name="azulfacebook">#1976d2</color>
     <color name="azul_twiter">#3ea1ec</color>
@@ -19,5 +20,12 @@
     <color name="vermelho">#e60000</color>
     #FB7D09
     #FF891C
+=======
+    <color name="cinza">#F9F9F9</color>
+    <color name="azulfacebook">#1976d2</color>
+    <color name="azul_twiter">#3ea1ec</color>
+<color name="lilas">#B19CD9</color>
+
+>>>>>>> 959b64819be0a0fbfb255b50bc0ee50ca3ccf326
 
 </resources>

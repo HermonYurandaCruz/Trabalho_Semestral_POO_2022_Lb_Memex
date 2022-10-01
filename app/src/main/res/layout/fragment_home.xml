@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<<<<<<< HEAD
 
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> 959b64819be0a0fbfb255b50bc0ee50ca3ccf326
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,10 +15,15 @@
     tools:context=".HomeFragment">
 
 
+<<<<<<< HEAD
 <FrameLayout
     android:id="@+id/conteinerHomefragmente"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
+=======
+<<<<<<< HEAD
+
+>>>>>>> ecd8357b86f8928f10345d096edff391e4be0a49
         <TextView
             android:id="@+id/tv_publicacoes"
             android:layout_width="wrap_content"
@@ -178,3 +187,6 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> 959b64819be0a0fbfb255b50bc0ee50ca3ccf326
