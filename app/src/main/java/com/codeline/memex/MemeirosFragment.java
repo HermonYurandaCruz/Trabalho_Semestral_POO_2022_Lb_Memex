@@ -32,7 +32,8 @@ public class MemeirosFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        Button bt_seguir = (Button) getView().findViewById(R.id.bt_seguir);
+
+       /*/ Button bt_seguir = (Button) getView().findViewById(R.id.bt_seguir);
         Button bt_seguindo=(Button) getView().findViewById(R.id.bt_seguindo);
 
     bt_seguir.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +55,8 @@ public class MemeirosFragment extends Fragment {
 
         }
     });
+
+        */
 
     }
 

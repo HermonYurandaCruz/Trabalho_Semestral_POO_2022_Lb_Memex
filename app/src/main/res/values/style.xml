@@ -7,17 +7,13 @@
 
     </style>
     <style name="CaixaPesquisa">
-<<<<<<< HEAD
+
 
         <item name="android:layout_marginRight">50dp</item>
         <item name="android:layout_marginLeft">50dp</item>
         <item name="android:background">@drawable/caixa_pesquisar</item>
 
-=======
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:radius">20dp</item>
-        <item name="android:background">@drawable/caixa_pesquisa</item>
->>>>>>> 959b64819be0a0fbfb255b50bc0ee50ca3ccf326
+
 
     </style>
     <style name="follow">
@@ -28,12 +24,7 @@
     </style>
 
 
-    <style name="barraCriacao">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:radius">20dp</item>
-        <item name="android:background">@drawable/barra_criacao</item>
 
-    </style>
     <style name="publicacao">
         <item name="android:layout_width">match_parent</item>
         <item name="android:radius">20dp</item>
@@ -47,16 +38,16 @@
         <item name="android:background">@drawable/caixatexto</item>
         <item name="android:padding">10dp</item>
         <item name="android:maxLength">25</item>
-        <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
         <item name="android:layout_marginBottom">20dp</item>
     </style>
 
     <style name="BotaoEntrar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:background">@drawable/botao</item>
 
@@ -68,8 +59,6 @@
     <style name="BotaoFallow">
         <item name="android:layout_width">55dp</item>
         <item name="android:layout_height">25dp</item>
-
-        <item name="android:layout_marginTop">20dp</item>
         <item name="android:background">@drawable/botaofallow</item>
 
 
@@ -84,8 +73,8 @@
         <item name="android:background">@drawable/caixa_pesquisar</item>
         <item name="android:padding">10dp</item>
         <item name="android:maxLength">20</item>
-        <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginBottom">20dp</item>
     </style>
 
@@ -94,12 +83,15 @@
         <item name="android:layout_height">150dp</item>
 
     </style>
-    <style name="conteinerPerfil">
+    <style name="caixa_usuario">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@drawable/conteiner_perfil</item>
-
+        <item name="android:layout_height">90dp</item>
+        <item name="android:layout_margin">22dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@drawable/caixa_usuario</item>
     </style>
+
 
 
 </resources>

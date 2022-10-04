@@ -18,13 +18,14 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/foto"
-            android:layout_width="350dp"
-            android:layout_height="400dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:src="@drawable/hermon"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:civ_border_width="2dp"
+            android:layout_marginTop="5dp"
             app:civ_border_color="@color/white"
             />
 
@@ -32,7 +33,7 @@
             android:id="@+id/tv_nomeUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
             android:text="Hermon Yuran da Cruz"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -40,6 +41,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/foto"
             />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_seguirPerfil"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            style="@style/BotaoFallow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario"
+            android:hint="Seguir"
+            android:gravity="center"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_biografia"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_seguirPerfil"
+            android:text="Sonhos sao apenas uma mensgaem que a nossa mente tras sobre o que mais queremos..."
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
 
 
         <TextView
@@ -47,24 +75,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="A seguir"
             android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@id/tv_numeroDePostagens"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario" />
+            app:layout_constraintTop_toBottomOf="@id/tv_biografia" />
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginStart="5dp"
-            android:text="A seguir"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@id/foto"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,9 +91,7 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/tv_numeroDePostagens"
-
             app:layout_constraintTop_toBottomOf="@id/tv_seguir"
-            android:layout_marginStart="50dp"
             />
 
 
@@ -83,19 +99,19 @@
             android:id="@+id/tv_numeroDePostagens"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="Posts"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario" />
+            app:layout_constraintTop_toBottomOf="@id/tv_biografia" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100"
+            android:text="10"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -105,12 +121,12 @@
             android:id="@+id/tv_seguidores"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="Seguidores"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_numeroDePostagens"
-            app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario"
+            app:layout_constraintTop_toBottomOf="@id/tv_biografia"
             android:layout_marginEnd="50dp"
 
 
@@ -131,18 +147,17 @@
             android:id="@+id/Top3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Top 3"
+            android:text="Meu Top 3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_seguir"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
-            android:textColor="@color/lilas"
             android:fontFamily="sans-serif-condensed-medium"
             />
         <ImageView
             android:id="@+id/iv_top1"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="100dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/Top3"
@@ -151,7 +166,7 @@
             />
         <ImageView
             android:id="@+id/iv_top2"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="100dp"
             app:layout_constraintStart_toEndOf="@id/iv_top1"
             app:layout_constraintTop_toBottomOf="@id/Top3"
@@ -160,7 +175,7 @@
             />
         <ImageView
             android:id="@+id/iv_top3"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="100dp"
             app:layout_constraintStart_toEndOf="@id/iv_top2"
             app:layout_constraintTop_toBottomOf="@id/Top3"
@@ -218,11 +233,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_perfil_publicacao" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            style="@style/conteinerPerfil"
-            />
+
 
 
 

@@ -1,20 +1,18 @@
+
+
 package com.codeline.memex;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+        import android.os.Bundle;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
+        import androidx.appcompat.app.AppCompatActivity;
+        import androidx.fragment.app.Fragment;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+        import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
-public class Home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-BottomNavigationView bottomNavigationView;
-TextView tv_usuarioPublicacao;
+public class Home extends AppCompatActivity {
 
+    private ChipNavigationBar chipNavigationBar;
+    private Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,55 +20,37 @@ TextView tv_usuarioPublicacao;
         setContentView(R.layout.activity_home);
         getSupportActionBar().hide();
 
-        bottomNavigationView=findViewById(R.id.bottonNavigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        chipNavigationBar = findViewById(R.id.chipNavigation);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,homeFragment);
+        chipNavigationBar.setItemSelected(R.id.home, true);
+        getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation, new HomeFragment()).commit();
 
+        chipNavigationBar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int i) {
+                switch (i) {
+                    case R.id.home:
+                        fragment = new HomeFragment();
+                        break;
+                    case R.id.memeiros:
+                        fragment = new MemeirosFragment();
+                        break;
+                    case R.id.ranking:
+                        fragment = new RankingFragment();
+                        break;
+                    case R.id.notificacoes:
+                        fragment = new NotificaoessFragment();
+                        break;
+                    case R.id.setting:
+                        fragment = new SettingFragment();
+                        break;
 
+                }
+
+                if (fragment != null) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation, fragment).commit();
+                }
+            }
+        });
     }
-    HomeFragment homeFragment=new HomeFragment();
-    MemeirosFragment memeirosFragment=new MemeirosFragment();
-    SettingFragment settingFragment=new SettingFragment();
-
-
-    RankingFragment rankingFragment=new RankingFragment();
-    NotificaoessFragment notificaoessFragment=new NotificaoessFragment();
-
-
-
-
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation, homeFragment).commit();
-                return true;
-
-            case R.id.memeiros:
-                getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,memeirosFragment).commit();
-                return true;
-
-
-            case R.id.ranking:
-                getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,rankingFragment).commit();
-                return true;
-
-            case R.id.notificacoes:
-                getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,notificaoessFragment).commit();
-                return true;
-
-            case R.id.setting:
-                getSupportFragmentManager().beginTransaction().replace(R.id.conteinernavagation,settingFragment).commit();
-                return true;
-
-      }
-        return false;
-
-    }
-
-
 }

@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MemeirosFragment"
     android:background="@color/white">
-<<<<<<< HEAD
 
 
 
@@ -33,150 +32,214 @@
         android:hint="  Pesquisar"
         android:inputType="text"
         android:fontFamily="sans-serif-condensed-medium"
-        android:drawableRight="@drawable/ic_pesquisar"
+        android:drawableRight="@drawable/ic_pesquisar24"
         app:layout_constraintEnd_toEndOf="parent"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_publicacoes" />
 
+    <View
+        android:id="@+id/usuario"
+        style="@style/caixa_usuario"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_pesquisar" />
 
-    <FrameLayout
-        android:id="@+id/conteinerMemeiros"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="180dp"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_perfil_usuario"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="@id/usuario"
+        app:layout_constraintTop_toTopOf="@id/usuario"
+        app:layout_constraintBottom_toBottomOf="@id/usuario"
+        android:src="@drawable/maia"
+        android:layout_marginStart="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_nomeSeguir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adriana Maia"
+        app:layout_constraintTop_toTopOf="@id/usuario"
+        app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        />
 
 
-<androidx.appcompat.widget.AppCompatButton
-    android:id="@+id/bt_seguir"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Seguir"
-    android:textColor="@color/white"
-    style="@style/BotaoFallow"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
-    app:layout_constraintEnd_toStartOf="@id/bt_seguindo"
-    />
+    <TextView
+        android:id="@+id/tv_seguir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="Seguidores"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_numeroDePostagens"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario"
+        app:layout_constraintTop_toBottomOf="@id/tv_nomeSeguir" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12K"
+        android:layout_marginStart="27dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario"
+        app:layout_constraintTop_toBottomOf="@id/tv_seguir"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_numeroDePostagens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posts"
+        android:textSize="14sp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/tv_seguir"
+        app:layout_constraintTop_toBottomOf="@id/tv_nomeSeguir" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23"
+        android:textSize="12sp"
+        android:layout_marginStart="17dp"
+        app:layout_constraintStart_toEndOf="@id/tv_seguir"
+        app:layout_constraintTop_toBottomOf="@id/tv_numeroDePostagens" />
+
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_seguindo"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
         style="@style/BotaoFallow"
+        android:hint="seguir"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/usuario"
+        app:layout_constraintTop_toTopOf="@id/usuario"
+        app:layout_constraintBottom_toBottomOf="@id/usuario"
+        android:layout_marginEnd="20dp"
+
+        />
+
+
+
+
+
+
+    <View
+        android:id="@+id/usuario2"
+        style="@style/caixa_usuario"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usuario" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_perfil_usuario2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="@id/usuario2"
+        app:layout_constraintTop_toTopOf="@id/usuario2"
+        app:layout_constraintBottom_toBottomOf="@id/usuario2"
+        android:src="@drawable/tatiana"
+        android:layout_marginStart="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_nomeSeguir2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Tatiana Langa"
+        app:layout_constraintTop_toTopOf="@id/usuario2"
+        app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario2"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
-        android:text="Seguindo"
-        android:textColor="@color/white"
-<<<<<<< HEAD
-=======
-        style="@style/BotaoFallow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
-        app:layout_constraintStart_toEndOf="@id/bt_seguir"/>
-=======
-   Criacao de texto
-    <!-- TODO: Update blank fragment layout -->
-<TextView
-    android:id="@+id/tv_usuario"
-    android:layout_width="wrap_content"
-    android:layout_height="30dp"
-    android:text="Usuários"
-    android:textSize="20sp"
-    android:textColor="@color/black"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="20dp"
-    android:fontFamily="serif"
-    android:textStyle="bold"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    />
-   <EditText
-       android:id="@+id/et_pesquisar"
-       android:layout_width="match_parent"
-       android:layout_height="27dp"
-       android:hint="       Pesquisar"
-       android:textColorHint="@color/white"
-       android:textStyle="italic"
-       android:textColor="@color/white"
-       style="@style/CaixaPesquisa"
-       android:drawableEnd="@drawable/ic_baseline_search_24"
-       android:drawablePadding="15dip"
-       android:paddingEnd="10dip"
-       android:textAlignment="viewStart"
-       android:textSize="14sp"
-       app:layout_constraintTop_toBottomOf="@id/tv_usuario"
-       android:layout_margin="20dp"
-       app:layout_constraintEnd_toEndOf="parent"
-   />
+        android:textSize="18dp"
+        />
+
 
     <TextView
-        android:id="@+id/et_Seguir"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        style="@style/follow"
-        android:text="Seguir"
-        android:textColor="@color/white"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="30dp"         />
-    <TextView
-        android:id="@+id/et_aseguir"
-        android:layout_width="100dp"
-        android:layout_height="25dp"
-        style="@style/follow"
-        android:text="A seguir"
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/et_pesquisar"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="30dp"
-        />
-    <View
-        android:id="@+id/view_usuario"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@id/et_Seguir"
-        style="@style/CaixaPesquisa"
-        />
-    <ImageView
-        android:id="@+id/iv_fotoPerfil"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        style="@style/criar"
-        app:layout_constraintStart_toStartOf="@id/view_usuario"
-        app:layout_constraintTop_toTopOf="@id/view_usuario"
-        app:layout_constraintBottom_toBottomOf="@id/view_usuario"
-        android:layout_marginStart="20dp"
+        android:id="@+id/tv_seguir2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:text="Seguidores"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_numeroDePostagens2"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario2"
+        app:layout_constraintTop_toBottomOf="@id/tv_nomeSeguir2" />
 
-        />
     <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7k"
+        android:layout_marginStart="27dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario2"
+        app:layout_constraintTop_toBottomOf="@id/tv_seguir2"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_numeroDePostagens2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posts"
+        android:textSize="14sp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/tv_seguir2"
+        app:layout_constraintTop_toBottomOf="@id/tv_nomeSeguir2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textSize="12sp"
+        android:layout_marginStart="17dp"
+        app:layout_constraintStart_toEndOf="@id/tv_seguir2"
+        app:layout_constraintTop_toBottomOf="@id/tv_numeroDePostagens2" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="70dp"
         android:layout_height="30dp"
-        android:text="Tatiana Tomas Langa"
-        app:layout_constraintStart_toEndOf="@id/iv_fotoPerfil"
-        app:layout_constraintTop_toTopOf="@id/view_usuario"
-        android:textStyle="bold"
-        android:fontFamily="serif"
-        android:textColor="@color/white"
-        android:layout_marginStart="20dp"
-      android:layout_marginTop="25dp"
+        style="@style/BotaoFallow"
+        android:hint="seguir"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/usuario2"
+        app:layout_constraintTop_toTopOf="@id/usuario2"
+        app:layout_constraintBottom_toBottomOf="@id/usuario2"
+        android:layout_marginEnd="20dp"
+
 
         />
-  
 
 
 
 
->>>>>>> 959b64819be0a0fbfb255b50bc0ee50ca3ccf326
->>>>>>> ecd8357b86f8928f10345d096edff391e4be0a49
 
-        app:layout_constraintStart_toEndOf="@id/bt_seguir"
-        app:layout_constraintTop_toBottomOf="@id/et_pesquisar" />
+
+
+
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
