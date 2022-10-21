@@ -3,51 +3,41 @@
 
     <style name="CaixaNevegacao">
         <item name="android:layout_width">match_parent</item>
+   </style>
 
-
-    </style>
     <style name="CaixaPesquisa">
-
-
         <item name="android:layout_marginRight">50dp</item>
         <item name="android:layout_marginLeft">50dp</item>
         <item name="android:background">@drawable/caixa_pesquisar</item>
-
-
-
     </style>
-    <style name="follow">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:radius">20dp</item>
-        <item name="android:background">@drawable/follow</item>
-
-    </style>
-
 
 
     <style name="publicacao">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:radius">20dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
         <item name="android:background">@drawable/caixa_publicacao</item>
-
     </style>
+
+
 
     <style name="TextoLogin">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/caixatexto</item>
         <item name="android:padding">10dp</item>
-        <item name="android:maxLength">25</item>
-        <item name="android:layout_marginRight">50dp</item>
-        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginBottom">20dp</item>
     </style>
+
 
     <style name="BotaoEntrar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">50dp</item>
-        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:background">@drawable/botao</item>
 
@@ -57,9 +47,20 @@
 
 
     <style name="BotaoFallow">
-        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">25dp</item>
         <item name="android:background">@drawable/botaofallow</item>
+
+
+
+
+    </style>
+
+
+    <style name="BotaoEditar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:background">@drawable/editar</item>
 
 
 
@@ -89,6 +90,28 @@
         <item name="android:layout_margin">22dp</item>
         <item name="android:layout_marginRight">20dp</item>
         <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@drawable/caixa_usuario</item>
+    </style>
+
+    <style name="icon">
+        <item name="android:background">@drawable/sorrindo</item>
+    </style>
+
+    <style name="definicoes">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:background">@drawable/definicoes</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="popCriarMeme">
+        <item name="android:layout_margin">22dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+
         <item name="android:background">@drawable/caixa_usuario</item>
     </style>
 

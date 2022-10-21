@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons">
+        <item>@drawable/emoj_riso</item>
+        <item>@drawable/emoj_risomax</item>
+        <item>@drawable/emoj_tmlc</item>
+        <item>@drawable/emoj_desconfianca</item>
+        <item>@drawable/emoj_silencio</item>
+        <item>@drawable/emoj_tristeza</item>
+    </array>
+    <array name="color">
+        <item>@color/lilas</item>
+        <item>@color/vermelho</item>
+        <item>@color/azulfacebook</item>
+        <item>@color/amarelo</item>
+        <item>@color/lilas</item>
+        <item>@color/teal_200</item>    </array>
+
+
+</resources>

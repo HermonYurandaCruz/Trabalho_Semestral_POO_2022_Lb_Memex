@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".popUpReacoes">
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        >
+<ImageView
+    android:id="@+id/iv_emoj_riso"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:src="@drawable/emoj_riso"
+    android:layout_marginStart="20dp"
+    />
+        <ImageView
+            android:id="@+id/iv_emoj_risomax"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/emoj_risomax"/>
+
+        <ImageView
+            android:id="@+id/iv_emoj_silencio"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/emoj_silencio"/>
+        <ImageView
+            android:id="@+id/iv_emoj_tmlc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/emoj_tmlc"/>
+        <ImageView
+            android:id="@+id/iv_emoj_desconfianca"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/emoj_desconfianca"/>
+
+        <ImageView
+            android:id="@+id/iv_emoj_tristeza"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/emoj_tristeza"/>
+
+    </LinearLayout>
+
+</LinearLayout>

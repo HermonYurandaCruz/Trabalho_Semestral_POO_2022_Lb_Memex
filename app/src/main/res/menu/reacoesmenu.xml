@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+    <item android:id="@+id/riso"
+        android:title="Riso"
+        android:icon="@drawable/emoj_riso"
+        />
+    <item android:id="@+id/LoL"
+        android:title="LOL"
+        android:icon="@drawable/emoj_risomax"
+        />
+    <item android:id="@+id/tmlc"
+        android:title="tmlc"
+        android:icon="@drawable/emoj_tmlc"
+        />
+    <item android:id="@+id/silencio"
+        android:title="Cala"
+        android:icon="@drawable/emoj_silencio"
+        />
+    <item android:id="@+id/desconfianca"
+        android:title="Ok"
+        android:icon="@drawable/emoj_desconfianca"
+        />
+    <item android:id="@+id/tristeza"
+        android:title="Tristeza"
+        android:icon="@drawable/emoj_tristeza"
+        />
+
+
+
+</group>
+
+</menu>
+
+

@@ -21,7 +21,7 @@
 
     <item android:id="@+id/ranking"
         android:title="Ranking "
-        android:icon="@drawable/ranking1"
+        android:icon="@drawable/ranking2"
         app:cnb_textColor="@color/lilas"
         app:cnb_backgroundColor="#dfcae1"
         app:cnb_iconColor="@color/lilas"

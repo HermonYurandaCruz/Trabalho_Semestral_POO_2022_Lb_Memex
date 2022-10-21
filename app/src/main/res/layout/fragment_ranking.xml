@@ -7,19 +7,25 @@
     tools:context=".RankingFragment">
 
     <TextView
+        android:id="@+id/tv_ranking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:text="Ranking"
-        android:textColor="@color/lilas"
+        android:textStyle="bold"
+        android:textColor="@color/lilas3"
         android:textSize="22sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
+            android:src="@drawable/ranking2"
             android:id="@+id/iv_ranking"
             android:layout_width="200dp"
             android:layout_height="200dp"
@@ -36,19 +42,18 @@
             app:layout_constraintStart_toStartOf="@id/iv_ranking"
             app:layout_constraintEnd_toEndOf="@id/iv_ranking"
             app:layout_constraintTop_toTopOf="@id/iv_ranking"
-            android:layout_marginTop="60dp"
 
             />
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_2lugar_ranking"
-            android:src="@drawable/maia"
             android:layout_width="65dp"
             android:layout_height="65dp"
+            android:src="@drawable/maia"
             app:layout_constraintStart_toStartOf="@id/iv_ranking"
             app:layout_constraintEnd_toStartOf="@id/iv_1lugar_ranking"
             app:layout_constraintTop_toTopOf="@id/iv_ranking"
-            android:layout_marginTop="100dp"
-            android:layout_marginStart="40.5dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="5dp"
             />
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_3lugar_ranking"
@@ -57,8 +62,8 @@
             android:layout_height="65dp"
             app:layout_constraintEnd_toEndOf="@id/iv_ranking"
             app:layout_constraintTop_toBottomOf="@id/iv_1lugar_ranking"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="56dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
             />
 
     <ScrollView
@@ -68,7 +73,7 @@
 
       <androidx.constraintlayout.widget.ConstraintLayout
           android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_height="wrap_content">
 
           <View
               android:id="@+id/usuario"
@@ -83,10 +88,10 @@
               android:id="@+id/iv_perfil_usuario"
               android:layout_width="70dp"
               android:layout_height="70dp"
+              android:src="@drawable/maia"
               app:layout_constraintStart_toStartOf="@id/usuario"
               app:layout_constraintTop_toTopOf="@id/usuario"
               app:layout_constraintBottom_toBottomOf="@id/usuario"
-              android:src="@drawable/maia"
               android:layout_marginStart="10dp"
               />
           <TextView
@@ -153,7 +158,8 @@
               android:layout_width="70dp"
               android:layout_height="30dp"
               style="@style/BotaoFallow"
-              android:hint="seguir"
+              android:textColorHint="@color/white"
+              android:hint="seguir+"
               android:gravity="center"
               app:layout_constraintEnd_toEndOf="@id/usuario"
               app:layout_constraintTop_toTopOf="@id/usuario"
@@ -250,12 +256,109 @@
               android:layout_width="70dp"
               android:layout_height="30dp"
               style="@style/BotaoFallow"
-              android:hint="seguir"
+              android:hint="seguir+"
+              android:textColorHint="@color/white"
               android:gravity="center"
               app:layout_constraintEnd_toEndOf="@id/usuario2"
               app:layout_constraintTop_toTopOf="@id/usuario2"
               app:layout_constraintBottom_toBottomOf="@id/usuario2"
+              android:layout_marginEnd="20dp"/>
+
+
+
+          <View
+              android:id="@+id/usuario3"
+              style="@style/caixa_usuario"
+              android:layout_marginTop="16dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.6"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/usuario2" />
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/iv_perfil_usuario3"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              app:layout_constraintStart_toStartOf="@id/usuario3"
+              app:layout_constraintTop_toTopOf="@id/usuario3"
+              app:layout_constraintBottom_toBottomOf="@id/usuario3"
+              android:src="@drawable/hermon"
+              android:layout_marginStart="10dp"
+              />
+          <TextView
+              android:id="@+id/tv_nomeSeguir3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Hermon Yuaran da Cruz"
+              app:layout_constraintTop_toTopOf="@id/usuario3"
+              app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario3"
+              android:layout_marginStart="15dp"
+              android:layout_marginTop="20dp"
+              android:textSize="18dp"
+              />
+
+
+          <TextView
+              android:id="@+id/tv_seguir3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="15dp"
+              android:layout_marginTop="5dp"
+              android:text="Seguidores"
+              android:textSize="14sp"
+              app:layout_constraintEnd_toStartOf="@id/tv_numeroDePostagens3"
+              app:layout_constraintHorizontal_bias="0.173"
+              app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario3"
+              app:layout_constraintTop_toBottomOf="@id/tv_nomeSeguir3" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="3k"
+              android:layout_marginStart="27dp"
+              android:textSize="12sp"
+              app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario3"
+              app:layout_constraintTop_toBottomOf="@id/tv_seguir3"
+              />
+
+
+          <TextView
+              android:id="@+id/tv_numeroDePostagens3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Posts"
+              android:textSize="14sp"
+              android:layout_marginEnd="10dp"
+              android:layout_marginStart="15dp"
+              android:layout_marginTop="5dp"
+              app:layout_constraintStart_toEndOf="@id/tv_seguir3"
+              app:layout_constraintTop_toBottomOf="@id/tv_nomeSeguir3" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="15"
+              android:textSize="12sp"
+              android:layout_marginStart="17dp"
+              app:layout_constraintStart_toEndOf="@id/tv_seguir3"
+              app:layout_constraintTop_toBottomOf="@id/tv_numeroDePostagens3" />
+
+
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:layout_width="70dp"
+              android:layout_height="30dp"
+              style="@style/BotaoFallow"
+              android:hint="seguir+"
+              android:textColorHint="@color/white"
+              android:gravity="center"
+              app:layout_constraintEnd_toEndOf="@id/usuario3"
+              app:layout_constraintTop_toTopOf="@id/usuario3"
+              app:layout_constraintBottom_toBottomOf="@id/usuario3"
               android:layout_marginEnd="20dp"
+
+
+
 
 
               />
