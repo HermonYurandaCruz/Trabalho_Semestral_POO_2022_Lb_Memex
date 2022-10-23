@@ -70,7 +70,7 @@
                 tools:layout_editor_absoluteX="120dp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/bt_login"
+                android:id="@+id/bt_publicar"
                 android:textSize="12sp"
                 android:text="Publicar"
 
