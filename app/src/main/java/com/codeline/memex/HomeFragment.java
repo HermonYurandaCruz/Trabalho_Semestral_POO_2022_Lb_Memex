@@ -21,7 +21,7 @@ import android.widget.TextView;
 //follow unfollow
 public class  HomeFragment extends Fragment {
 
-private TextView tvUsuarioPublicacao;
+private TextView tvUsuarioPublicacao,et_pesquisar;
     ImageView  iv_post,iv_curtida,iv_criarMeme;
     View view;
 
@@ -70,13 +70,6 @@ private TextView tvUsuarioPublicacao;
 
 
 
-        botaoFollow.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 botaoFollow.setText("UnFollow-");
-                 botaoFollow.setTextColor(getResources().getColor(R.color.vermelho));
-             }
-         });
 
 
 
@@ -88,6 +81,13 @@ private TextView tvUsuarioPublicacao;
 
              }
          });
+        et_pesquisar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Pesquisar.class));
+
+            }
+        });
 
 
 
@@ -105,11 +105,10 @@ private TextView tvUsuarioPublicacao;
 
     public void Inicializar(){
         tvUsuarioPublicacao=view.findViewById(R.id.tv_usuario_publicacao);
-        botaoFollow=view.findViewById(R.id.publicado);
         iv_post=view.findViewById(R.id.iv_post);
         iv_curtida =view.findViewById(R.id.iv_reagir_meme);
         iv_criarMeme =view.findViewById(R.id.iv_criar_meme);
-
+        et_pesquisar=view.findViewById(R.id.et_pesquisar);
 
     }
 

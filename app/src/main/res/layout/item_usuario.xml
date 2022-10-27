@@ -53,11 +53,10 @@
         android:id="@+id/tv_numeroSeguidores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
         android:text="12K"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_seguir"
-        app:layout_constraintStart_toEndOf="@id/iv_perfil_usuario"
+        app:layout_constraintStart_toStartOf="@+id/tv_seguir"
         app:layout_constraintTop_toBottomOf="@id/tv_seguir" />
 
 
@@ -65,7 +64,7 @@
         android:id="@+id/tv_numeroDePostagens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Posts"
+        android:text="Postagens"
         android:textSize="14sp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="15dp"
@@ -84,19 +83,18 @@
         app:layout_constraintTop_toBottomOf="@id/tv_numeroDePostagens" />
 
 
-
     <androidx.appcompat.widget.AppCompatButton
-       android:id="@+id/bt_seguir"
+        android:id="@+id/bt_seguir"
+        style="@style/BotaoFallow"
         android:layout_width="70dp"
         android:layout_height="30dp"
-        style="@style/BotaoFallow"
-        android:hint="seguir+"
-        android:textColorHint="@color/white"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@id/usuario"
-        app:layout_constraintTop_toTopOf="@id/usuario"
-        app:layout_constraintBottom_toBottomOf="@id/usuario"
         android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:hint="seguir"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_numeroPostes"
+        app:layout_constraintEnd_toEndOf="@id/usuario"
+        app:layout_constraintTop_toTopOf="@+id/tv_nomeSeguir"
 
         />
 

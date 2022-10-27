@@ -34,7 +34,7 @@
         app:cnb_iconColor="@color/lilas"
         />
     <item android:id="@+id/setting"
-        android:title="Settings"
+        android:title="Definições"
         android:icon="@drawable/ic_baseline_menu_24"
         app:cnb_textColor="@color/lilas"
         app:cnb_backgroundColor="#dfcae1"

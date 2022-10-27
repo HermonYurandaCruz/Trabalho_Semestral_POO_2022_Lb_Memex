@@ -12,34 +12,66 @@
         android:layout_margin="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Setting"
+        android:text="Definições"
         android:textStyle="bold"
         android:textColor="@color/lilas3"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/view"
+        style="@style/definicoes"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_setting"
+        tools:layout_editor_absoluteX="5dp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_perfilDef"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/foto_padrao_perfil"
+        app:layout_constraintStart_toStartOf="@id/tv_setting"
+         app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"/>
+
+    <TextView
+        android:id="@+id/tv_nomeUsuarioDef"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/iv_perfilDef"
+        app:layout_constraintTop_toTopOf="@id/iv_perfilDef"
+        android:hint="Nome do usuario"
+        android:textSize="16dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:hint="Biografia.."
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nomeUsuarioDef"
+        app:layout_constraintStart_toEndOf="@+id/iv_perfilDef"
+        app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuarioDef" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="200dp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/def_meuPeriil"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            style="@style/definicoes"
-            android:text="   Meu Perfil"
-            android:gravity="center_vertical"
-            android:drawableStart="@drawable/perfil"
-            android:layout_marginTop="16dp"
 
-            />
+
         <TextView
             android:id="@+id/def_privacidade"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
             style="@style/definicoes"
             android:text="   Privacidade"
@@ -49,7 +81,7 @@
         <TextView
             android:id="@+id/def_ecentos"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
             style="@style/definicoes"
             android:text="   Eventos"
@@ -59,7 +91,7 @@
         <TextView
             android:id="@+id/def_suporte"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
             style="@style/definicoes"
             android:text="   Comunicar um problema"
@@ -69,7 +101,7 @@
         <TextView
             android:id="@+id/def_ajuda"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
             style="@style/definicoes"
             android:text="   Ajuda"
@@ -79,7 +111,7 @@
         <TextView
             android:id="@+id/def_sobre"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
             style="@style/definicoes"
             android:text="   Sobre"
@@ -89,7 +121,7 @@
         <TextView
             android:id="@+id/def_sairdaconta"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="55dp"
             android:layout_marginTop="5dp"
             style="@style/definicoes"
             android:text="   Terminar Sessão "
@@ -100,15 +132,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/code_line"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="3dp"
-                android:layout_marginStart="5dp"/>
+
             />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -122,7 +146,16 @@
 
 
     </LinearLayout>
+    <ImageView
+        android:layout_width="78dp"
+        android:layout_height="68dp"
+        android:src="@drawable/code_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="3dp"
 
+        />
 
 
 

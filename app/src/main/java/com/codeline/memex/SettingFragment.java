@@ -50,9 +50,10 @@ de_terminar.setOnClickListener(new View.OnClickListener() {
 
         return view;
     }
-    public void Inicializar(){
+    public void  Inicializar(){
         def_meuPerfil=view.findViewById(R.id.def_meuPeriil);
         de_terminar=view.findViewById(R.id.def_sairdaconta);
+
     }
 
     public void logout(){
@@ -61,6 +62,6 @@ de_terminar.setOnClickListener(new View.OnClickListener() {
             mAuth.signOut();
         }
         getActivity().finish();
-        startActivity(new Intent(this.getActivity(), TelaLogin.class));
+        startActivity(new Intent(getActivity(), TelaLogin.class));
     }
 }
