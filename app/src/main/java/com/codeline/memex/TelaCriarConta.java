@@ -98,6 +98,11 @@ public class TelaCriarConta extends AppCompatActivity {
             });
     }
 
+    public void teste(){
+        // Teste
+        
+    }
+
 
 
 }
