@@ -130,7 +130,7 @@ public class TelaLogin extends AppCompatActivity {
     private void AbrirTelaHome(){
         Intent intent=new Intent(TelaLogin.this,Home.class);
         startActivity(intent);
-        this.finish();
+        finish();
 
     }
 

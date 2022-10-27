@@ -102,9 +102,9 @@ public class CriarMeme extends AppCompatActivity {
                  String TextoMeme=et_meme.getText().toString().trim();
                  String linkfoto= String.valueOf(image_url);
 
-                 if(TextoMeme.isEmpty()&& linkfoto.isEmpty() )
-                     Toast.makeText(CriarMeme.this, "Escreva um teste ou adicione uma foto", Toast.LENGTH_SHORT).show();
-                 else
+                 if(TextoMeme.isEmpty()&& linkfoto.isEmpty() ) {
+                     Toast.makeText(CriarMeme.this, "Escreva um texto ou adicione uma foto", Toast.LENGTH_SHORT).show();
+                 } else
                  Publicacao(TextoMeme,"www.com.codeLine");
 
              }

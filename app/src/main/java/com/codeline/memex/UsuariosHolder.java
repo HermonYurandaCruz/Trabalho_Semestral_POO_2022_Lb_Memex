@@ -8,15 +8,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MemeirosHolder extends RecyclerView.ViewHolder {
+public class UsuariosHolder extends RecyclerView.ViewHolder {
     TextView tv_numeroSeguidores,tv_numeroPostes,tv_nomeUsuario;
     Button bt_seguir;
     ImageView imagem;
 
-    public MemeirosHolder(@NonNull View itemView) {
+    public UsuariosHolder(@NonNull View itemView) {
         super(itemView);
-        tv_nomeUsuario = itemView.findViewById(R.id.tv_nomeSeguir);
-        imagem = itemView.findViewById(R.id.iv_perfil_usuario);
+        itemView.findViewById(R.id.tv_nomeSeguir);
+        itemView.findViewById(R.id.iv_perfil_usuario);
         itemView.findViewById(R.id.tv_numeroPostes);
         itemView.findViewById(R.id.tv_numeroSeguidores);
         itemView.findViewById(R.id.bt_seguir);
