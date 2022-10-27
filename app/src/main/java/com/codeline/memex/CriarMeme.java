@@ -25,6 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -61,45 +62,15 @@ public class CriarMeme extends AppCompatActivity {
         if(resultCode == RESULT_OK){
             if (requestCode == COD_SEL_IMAGE){
                 image_url = data.getData();
-                subirPhoto(image_url);
+                Picasso.with(this).load(image_url).into(imagem_meme);
+
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
 
     }
 
-    private void subirPhoto(Uri image_url) {
-        progressDialog.setMessage("Adicionando Imagem");
-        progressDialog.show();
-        String rute_storage_photo = storage_path + "" + photo + "" + mAuth.getUid() +""+ idd;
-        StorageReference reference = storageReference.child(rute_storage_photo);
-        reference.putFile(image_url).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-                while (!uriTask.isSuccessful());
-                if (uriTask.isSuccessful()){
-                    uriTask.addOnSuccessListener(new OnSuccessListener<Uri>() {
-                        @Override
-                        public void onSuccess(Uri uri) {
-                            String download_uri = uri.toString();
-                            HashMap<String, Object> map = new HashMap<>();
-                            map.put("url_imagem", download_uri);
-                            mfirestore.collection("publicacao").document(idd).update(map);
-                            Toast.makeText(CriarMeme.this, "Imagem adicionada", Toast.LENGTH_SHORT).show();
-                            progressDialog.dismiss();
-                        }
-                    });
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(CriarMeme.this, "Error ao adicionar Imagem", Toast.LENGTH_SHORT).show();
-            }
-        });
 
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,11 +95,16 @@ public class CriarMeme extends AppCompatActivity {
                 startActivityForResult(i, COD_SEL_IMAGE);
             }
         });
+
          bt_publicar.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  String TextoMeme=et_meme.getText().toString().trim();
+                 String linkfoto= String.valueOf(image_url);
 
+                 if(TextoMeme.isEmpty()&& linkfoto.isEmpty() )
+                     Toast.makeText(CriarMeme.this, "Escreva um teste ou adicione uma foto", Toast.LENGTH_SHORT).show();
+                 else
                  Publicacao(TextoMeme,"www.com.codeLine");
 
              }
@@ -157,14 +133,59 @@ public class CriarMeme extends AppCompatActivity {
         String idUser = mAuth.getCurrentUser().getUid();
         DocumentReference id = mfirestore.collection("publicacao").document();
 
-        String rute_storage_photo = storage_path + "" + photo + "" + mAuth.getUid() +""+ idd;
+        String rute_storage_photo = storage_path + "" + photo + "" + mAuth.getUid() +""+ id.getId();
 
         Map<String, Object> map = new HashMap<>();
         map.put("id_usuario", idUser);
         map.put("id_post", id.getId());
         map.put("data",data);
         map.put("texto_publicacao",textMeme);
-     //   map.put("url_imagem", rute_storage_photo)
+        map.put("url_imagem", rute_storage_photo);
+
+
+
+
+        progressDialog.setMessage("A Criar meme");
+        progressDialog.show();
+        StorageReference reference = storageReference.child(rute_storage_photo);
+        reference.putFile(image_url).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
+                while (!uriTask.isSuccessful());
+                if (uriTask.isSuccessful()){
+                    uriTask.addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            String download_uri = uri.toString();
+                            HashMap<String, Object> map = new HashMap<>();
+                            map.put("url_imagem", download_uri);
+                            mfirestore.collection("publicacao").document(id.getId()).update(map);
+        //                  Toast.makeText(CriarMeme.this, "Imagem adicionada", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(CriarMeme.this, "Error ao adicionar Imagem", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         mfirestore.collection("publicacao").document(id.getId()).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -176,8 +197,13 @@ public class CriarMeme extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(getApplicationContext(), "Error ao criar, tente novamente", Toast.LENGTH_SHORT).show();
+
             }
         });
     }
+
+
+
+
 
 }
