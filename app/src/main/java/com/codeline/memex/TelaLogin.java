@@ -7,7 +7,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,19 +16,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.codeline.memex.model.Utilizador;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class TelaLogin extends AppCompatActivity {
     private Button bt_entrar;
@@ -40,6 +46,7 @@ public class TelaLogin extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private GoogleSignInClient client;
     private ImageView imv_google;
+    private FirebaseFirestore dbFirestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +55,7 @@ public class TelaLogin extends AppCompatActivity {
         getSupportActionBar().hide();
         IniciarNovoCadastro();
         mAuth = FirebaseAuth.getInstance();
+        dbFirestore = FirebaseFirestore.getInstance();
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -77,16 +85,7 @@ public class TelaLogin extends AppCompatActivity {
         bt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = edt_email.getText().toString();
-                String password = edt_senha.getText().toString();
-                if (email.isEmpty()||password.isEmpty()){
-                    Snackbar snackbar=Snackbar.make(v,"Preencha todos os campos!!!", Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.WHITE);
-                    snackbar.setTextColor(Color.BLACK);
-                    snackbar.show();
-
-                }else{ iniciarSessao();}
-
+                iniciarSessao();
             }
         });
 
@@ -112,6 +111,7 @@ public class TelaLogin extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
+                                    salvarUsuarioNoFirestore();
                                     Intent intent = new Intent(getApplicationContext(), Home.class);
                                     startActivity(intent);
                                 }else{
@@ -126,11 +126,34 @@ public class TelaLogin extends AppCompatActivity {
             }
         }
     }
+    //1133832]
+    private void salvarUsuarioNoFirestore(){
+        Map<String, Object> usuario = new HashMap<>();
+        usuario.put("email", mAuth.getCurrentUser().getEmail().toString());
+        usuario.put("nome_usuario", mAuth.getCurrentUser().getDisplayName());
+//        usuario.put("token", mAuth)
+        usuario.put("url_foto_perfil", mAuth.getCurrentUser().getPhotoUrl().toString());
+        dbFirestore.collection("usuario")
+                .add(usuario)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error adding document", e);
+                    }
+                });
+
+    }
 
     private void AbrirTelaHome(){
         Intent intent=new Intent(TelaLogin.this,Home.class);
         startActivity(intent);
-        finish();
+        this.finish();
 
     }
 
@@ -178,4 +201,8 @@ public class TelaLogin extends AppCompatActivity {
         }
 
     }
+
+
+
+
 }
