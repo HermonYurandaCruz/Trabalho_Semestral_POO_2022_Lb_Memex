@@ -24,14 +24,18 @@
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/activity_main.xml" value="0.11820652173913043" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/activity_meu_perfil.xml" value="0.20416666666666666" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/activity_perfil_usuarios.xml" value="0.1" />
+        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/activity_pop_up_reacoes.xml" value="0.22447916666666667" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/activity_tela_criar_conta.xml" value="0.19882246376811594" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/activity_tela_login.xml" value="0.1" />
-        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_home.xml" value="0.11820652173913043" />
-        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_memeiros.xml" value="0.18" />
+        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_memeiros.xml" value="0.1" />
+        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_perfil.xml" value="0.1" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_ranking.xml" value="0.16757246376811594" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_seguindo.xml" value="0.15" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_seguir.xml" value="0.1" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/item_comentario.xml" value="0.1" />
+        <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/item_publicacaao.xml" value="0.18" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/layout/item_usuario.xml" value="0.1" />
         <entry key="..\:/Biblioteca/Desktop/Trabalho_Semestral/Trabalho_Semestral_POO_2022_Lb_Memex/app/src/main/res/menu/navegarmemex.xml" value="0.22447916666666667" />
         <entry key="..\:/Proj Android/MemeX/app/src/main/res/drawable/barra_criacao.xml" value="0.109" />
@@ -102,12 +106,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>

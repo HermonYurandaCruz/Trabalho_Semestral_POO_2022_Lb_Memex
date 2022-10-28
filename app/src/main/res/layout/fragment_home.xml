@@ -44,124 +44,15 @@
     android:layout_height="match_parent"
     android:layout_marginTop="100dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-
-                <ImageView
-                    android:id="@+id/iv_perfil_publicacao"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
-                    android:src="@drawable/foto_padrao_perfil"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_Data"
-                    app:layout_constraintTop_toTopOf="@+id/tv_usuario_publicacao"
-                    app:layout_constraintStart_toStartOf="parent"
-
-                    />
-
-
-                <ImageView
-                    android:id="@+id/iv_post"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/publicacao"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:src="@drawable/stuck"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_textoMeme"
-                    tools:layout_editor_absoluteY="241dp" />
-
-                <TextView
-                    android:id="@+id/tv_usuario_publicacao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Nome do Usuario"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <TextView
-                    android:id="@+id/tv_Data"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data: 14/09/2022"
-                    android:textSize="11sp"
-                    app:layout_constraintStart_toStartOf="@id/tv_usuario_publicacao"
-                    app:layout_constraintTop_toBottomOf="@id/tv_usuario_publicacao" />
-
-                <TextView
-                    android:id="@+id/tv_textoMeme"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:gravity="start"
-                    android:text="Texto ..."
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@id/bt_Seguir_publicado"
-                    app:layout_constraintStart_toStartOf="@id/iv_perfil_publicacao"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_Data" />
-
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/bt_Seguir_publicado"
-                    style="@style/BotaoFallow"
-                    android:gravity="center"
-                    android:hint="seguir"
-                    android:textColorHint="@color/white"
-                    android:textSize="10sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_Data"
-                    app:layout_constraintEnd_toEndOf="@+id/iv_post"
-                    app:layout_constraintTop_toTopOf="@+id/tv_usuario_publicacao" />
-
-
-                <ImageView
-                    android:id="@+id/iv_reagir_meme"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    app:layout_constraintStart_toStartOf="@id/iv_post"
-                    app:layout_constraintTop_toBottomOf="@id/iv_post"
-                    android:src="@drawable/sorrindo"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
-
-                    />
-
-
-                <ImageView
-                    android:id="@+id/iv_comentar_meme"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    app:layout_constraintStart_toEndOf="@id/iv_reagir_meme"
-                    app:layout_constraintTop_toBottomOf="@id/iv_post"
-                    android:src="@drawable/ic_comment_meme24"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="10dp"/>
-
-                <ImageView
-
-                    android:id="@+id/tv_notificar_publicaoes_meme"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_security_24"
-                    app:layout_constraintStart_toEndOf="@+id/iv_comentar_meme"
-                    app:layout_constraintTop_toBottomOf="@id/iv_post"
-                    android:layout_marginTop="5dp"
-                    />
-
-
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_publicacoes"
+                android:layout_width="match_parent"
+                tools:listitem="@layout/item_publicacaao"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/et_pesquisar"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
 
 
 </ScrollView>
