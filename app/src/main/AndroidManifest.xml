@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemeX">
         <activity
+            android:name=".RecuperarSenha"
+            android:exported="false" />
+        <activity
+            android:name=".ActualizarInformacaoPessoal"
+            android:exported="false" />
+        <activity
+            android:name=".MudarSenha"
+            android:exported="false" />
+        <activity
+            android:name=".Privacidade"
+            android:exported="false" />
+        <activity
             android:name=".ComentarMeme"
             android:exported="false">
             <meta-data

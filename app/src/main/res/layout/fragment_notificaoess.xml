@@ -3,43 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cinza"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NotificaoessFragment">
     <TextView
         android:id="@+id/tv_Notificacoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
         android:text="Notificações"
+        android:layout_marginTop="16dp"
         android:textStyle="bold"
-        android:textColor="@color/lilas3"
-        android:textSize="22sp"
+        android:textSize="18sp"
+        android:textColor="@color/pretoTextos"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="1dp"
+        android:src="@drawable/notifications_active"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Notificacoes"
+        app:layout_constraintStart_toEndOf="@+id/tv_Notificacoes"
+        app:layout_constraintTop_toTopOf="@+id/tv_Notificacoes" />
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_memeiros"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            style="@style/definicoes"
+        tools:listitem="@layout/item_notificacao"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Notificacoes"
+        android:layout_height="wrap_content">
 
-            />
-
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 
-
-
-
-
-
-    </LinearLayout>
 
 
 

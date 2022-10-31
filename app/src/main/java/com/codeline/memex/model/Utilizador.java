@@ -1,8 +1,9 @@
 package com.codeline.memex.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Utilizador {
+public class Utilizador implements Serializable {
 
     protected String id_do_usuario;
     protected String token;

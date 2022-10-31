@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MudarSenha">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Mudar a senha"
+        android:textColor="@color/lilas3"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/senhaActual"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textColorHint="@color/black"
+            android:hint="   Senha actual"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            style="@style/senha"
+            android:inputType="textPassword"/>
+        <EditText
+            android:id="@+id/novaSenha"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textColorHint="@color/black"
+            android:hint="   Nova senha"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            style="@style/senha"
+            android:inputType="textPassword"/>
+        <EditText
+            android:id="@+id/confirmarNovaSenha"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textColorHint="@color/black"
+            android:hint="   Confirmar nova senha"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            style="@style/senha"
+            android:inputType="textPassword"/>
+        <Button
+            android:id="@+id/btnMudarSenha"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Mudar senha"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            style="@style/btn_mudar_senha"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/esqueceu_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/lilas"
+            android:text="Esqueceu senha?"
+            android:layout_marginStart="125dp"
+            android:layout_marginEnd="125dp"
+            />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

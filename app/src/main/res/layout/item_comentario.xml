@@ -2,16 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <ImageView
         android:id="@+id/iv_perfil_publicacao"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/foto_padrao_perfil"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/perfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_usuario_publicacao"
 
@@ -21,8 +22,9 @@
         android:id="@+id/tv_usuario_publicacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:text="Nome do Usuario"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
         android:textColor="@color/pretoTextos"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
@@ -30,13 +32,51 @@
 
 
     <TextView
+        android:id="@+id/tv_dataComentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25/07/2022"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_usuario_publicacao"
+        app:layout_constraintTop_toBottomOf="@+id/tv_usuario_publicacao" />
 
-        android:id="@+id/tv_comentarioPost"
+    <TextView
+        android:id="@+id/tv_comentarioPublicacao"
         style="@style/comentario"
+        android:textSize="14sp"
+        android:text="@string/memeYusuf"
+        android:paddingEnd="7dip"
+        android:paddingLeft="15dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/tv_usuario_publicacao"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/iv_perfil_publicacao" />
 
+    <TextView
+        android:id="@+id/tv_responderComentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="responder"
+        app:layout_constraintEnd_toEndOf="@+id/tv_comentarioPublicacao"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comentarioPublicacao"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_numeroDeGostosComentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/tv_responderComentario"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comentarioPublicacao"
+        android:textStyle="bold"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gostos "
+        app:layout_constraintEnd_toStartOf="@+id/tv_numeroDeGostosComentario"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comentarioPublicacao"
+        android:layout_marginEnd="2dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

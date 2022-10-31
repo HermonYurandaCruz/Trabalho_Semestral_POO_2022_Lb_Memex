@@ -17,8 +17,8 @@ public class UsuariosHolder extends RecyclerView.ViewHolder {
         super(itemView);
         itemView.findViewById(R.id.tv_nomeSeguir);
         itemView.findViewById(R.id.iv_perfil_usuario);
-        itemView.findViewById(R.id.tv_numeroPostes);
+        itemView.findViewById(R.id.tv_numeroPublicacoes);
         itemView.findViewById(R.id.tv_numeroSeguidores);
-        itemView.findViewById(R.id.bt_seguir);
+        itemView.findViewById(R.id.tv_seguir);
     }
 }

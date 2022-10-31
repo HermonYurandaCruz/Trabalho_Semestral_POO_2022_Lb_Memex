@@ -1,6 +1,9 @@
 package com.codeline.memex.model;
 
-public class Publicacao {
+import java.io.Serializable;
+import java.util.List;
+
+public class Publicacao implements Serializable {
 
     private String nome_usuario;
     private String url_imagem;
@@ -10,6 +13,8 @@ public class Publicacao {
     private String id_usuario;
     private String data_publicacao;
     private String hora_publicacao;
+    private List<Curtida> curtidas;
+    private List<Comentario> comentarios;
 
     public Publicacao() {
     }
@@ -88,5 +93,21 @@ public class Publicacao {
 
     public void setHora_publicacao(String hora_publicacao) {
         this.hora_publicacao = hora_publicacao;
+    }
+
+    public List<Curtida> getCurtidas() {
+        return curtidas;
+    }
+
+    public void setCurtidas(List<Curtida> curtidas) {
+        this.curtidas = curtidas;
+    }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
     }
 }

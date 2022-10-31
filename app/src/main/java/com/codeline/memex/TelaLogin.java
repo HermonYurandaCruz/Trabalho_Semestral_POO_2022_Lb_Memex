@@ -12,11 +12,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.codeline.memex.model.Utilizador;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -45,7 +43,7 @@ public class TelaLogin extends AppCompatActivity {
     private EditText edt_senha;
     private FirebaseAuth mAuth;
     private GoogleSignInClient client;
-    private ImageView imv_google;
+    private TextView tv_google;
     private FirebaseFirestore dbFirestore;
 
     @Override
@@ -89,7 +87,7 @@ public class TelaLogin extends AppCompatActivity {
             }
         });
 
-        imv_google.setOnClickListener(new View.OnClickListener() {
+        tv_google.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = client.getSignInIntent();
@@ -111,7 +109,8 @@ public class TelaLogin extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    salvarUsuarioNoFirestore();
+                                    if(!dbFirestore.collection("email").equals(mAuth.getCurrentUser().getEmail()))
+                                        salvarUsuarioNoFirestore();
                                     Intent intent = new Intent(getApplicationContext(), Home.class);
                                     startActivity(intent);
                                 }else{
@@ -126,7 +125,7 @@ public class TelaLogin extends AppCompatActivity {
             }
         }
     }
-    //1133832]
+
     private void salvarUsuarioNoFirestore(){
         Map<String, Object> usuario = new HashMap<>();
         usuario.put("email", mAuth.getCurrentUser().getEmail().toString());
@@ -163,7 +162,7 @@ public class TelaLogin extends AppCompatActivity {
         bt_entrar=findViewById(R.id.bt_login);
         tv_criarConta=findViewById(R.id.tv_criar_conta);
         tv_EsqueceuSenha = findViewById(R.id.tv_esquecu_senha);
-        imv_google = findViewById(R.id.iv_google);
+        tv_google = findViewById(R.id.tv_google);
     }
 
     private void iniciarSessao(){
@@ -201,6 +200,32 @@ public class TelaLogin extends AppCompatActivity {
         }
 
     }
+    //recive a result in real time from firestore
+//    private void getRealTimeUpdates(){
+//        dbFirestore.collection("usuario")
+//                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+//                        if(e != null){
+//                            Log.w(TAG, "Listen failed.", e);
+//                            return;
+//                        }
+//                        for (DocumentChange dc : queryDocumentSnapshots.getDocumentChanges()) {
+//                            switch (dc.getType()) {
+//                                case ADDED:
+//                                    Log.d(TAG, "New city: " + dc.getDocument().getData());
+//                                    break;
+//                                case MODIFIED:
+//                                    Log.d(TAG, "Modified city: " + dc.getDocument().getData());
+//                                    break;
+//                                case REMOVED:
+//                                    Log.d(TAG, "Removed city: " + dc.getDocument().getData());
+//                                    break;
+//                            }
+//                        }
+//                    }
+//                });
+//    }
 
 
 

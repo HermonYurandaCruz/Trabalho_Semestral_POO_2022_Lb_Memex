@@ -30,10 +30,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class SettingFragment extends Fragment {
-    TextView tv_nomeUsuarioDef,de_terminar;
-  CircleImageView iv_perfilDef;
+    private TextView tv_nomeUsuarioDef,de_terminar;
+    private CircleImageView iv_perfilDef;
     private Handler handler = new Handler();
     View view;
+    private TextView tv_privacidade;
 
     private FirebaseAuth mAuth;
 
@@ -65,6 +66,13 @@ public class SettingFragment extends Fragment {
             }
         });
 
+        tv_privacidade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Privacidade.class));
+            }
+        });
+
         iv_perfilDef.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,6 +97,7 @@ de_terminar.setOnClickListener(new View.OnClickListener() {
         tv_nomeUsuarioDef=view.findViewById(R.id.tv_nomeUsuarioDef);
         de_terminar=view.findViewById(R.id.def_sairdaconta);
         iv_perfilDef=view.findViewById(R.id.iv_perfilDef);
+        tv_privacidade=view.findViewById(R.id.def_privacidade);
 
     }
 

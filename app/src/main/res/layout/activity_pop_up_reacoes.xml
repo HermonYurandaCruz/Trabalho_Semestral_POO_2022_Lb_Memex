@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".popUpReacoes">
     <LinearLayout
-        android:layout_margin="5dp"
         android:orientation="horizontal"
+        android:background="@drawable/caixa_publicacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -16,42 +16,56 @@
         >
 <ImageView
     android:id="@+id/iv_emoj_riso"
-    android:layout_width="30dp"
-    android:layout_height="30dp"
+    android:layout_width="42dp"
+    android:layout_height="42dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="16dp"
     android:src="@drawable/emoj_riso"
-    android:layout_marginStart="20dp"
+
     />
         <ImageView
             android:id="@+id/iv_emoj_risomax"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
             android:src="@drawable/emoj_risomax"/>
 
         <ImageView
             android:id="@+id/iv_emoj_silencio"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
             android:src="@drawable/emoj_silencio"/>
         <ImageView
             android:id="@+id/iv_emoj_tmlc"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
             android:src="@drawable/emoj_tmlc"/>
         <ImageView
             android:id="@+id/iv_emoj_desconfianca"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
             android:src="@drawable/emoj_desconfianca"/>
 
         <ImageView
             android:id="@+id/iv_emoj_tristeza"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="15dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/emoj_tristeza"/>
 
     </LinearLayout>

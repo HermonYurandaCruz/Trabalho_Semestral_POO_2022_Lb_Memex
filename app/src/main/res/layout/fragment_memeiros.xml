@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/cinza"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MemeirosFragment"
     android:background="@color/white">
@@ -11,24 +12,21 @@
         android:id="@+id/tv_publicacoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:text="Usuarios "
         android:textStyle="bold"
-        android:textColor="@color/lilas3"
-        android:textSize="22sp"
+        android:textSize="18sp"
+        android:textColor="@color/pretoTextos"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <EditText
         android:id="@+id/et_pesquisar"
         style="@style/Pesquisa"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:hint="  Pesquisar"
-        android:inputType="text"
-        android:fontFamily="sans-serif-condensed-medium"
         android:drawableRight="@drawable/ic_pesquisar24"
         app:layout_constraintEnd_toEndOf="parent"
         android:minHeight="48dp"
@@ -39,6 +37,7 @@
      android:id="@+id/recyclerview_memeiros"
      android:layout_width="match_parent"
      tools:listitem="@layout/item_usuario"
+     android:layout_marginTop="10dp"
      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
      app:layout_constraintTop_toBottomOf="@+id/et_pesquisar"
      android:layout_height="wrap_content">

@@ -10,15 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MemeirosHolder extends RecyclerView.ViewHolder {
     TextView tv_numeroSeguidores,tv_numeroPostes,tv_nomeUsuario;
-    Button bt_seguir;
+    TextView tv_seguir;
     ImageView imagem;
 
     public MemeirosHolder(@NonNull View itemView) {
         super(itemView);
         tv_nomeUsuario = itemView.findViewById(R.id.tv_nomeSeguir);
         imagem = itemView.findViewById(R.id.iv_perfil_usuario);
-        itemView.findViewById(R.id.tv_numeroPostes);
-        itemView.findViewById(R.id.tv_numeroSeguidores);
-        itemView.findViewById(R.id.bt_seguir);
+        tv_numeroPostes = itemView.findViewById(R.id.tv_numeroDePostagens);
+        tv_numeroSeguidores = itemView.findViewById(R.id.tv_numeroSeguidores);
+        tv_seguir = itemView.findViewById(R.id.tv_seguirUsuario);
     }
 }

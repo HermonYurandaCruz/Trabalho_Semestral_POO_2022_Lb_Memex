@@ -5,40 +5,28 @@
         <item name="android:layout_width">match_parent</item>
    </style>
 
-    <style name="CaixaPesquisa">
-        <item name="android:layout_marginRight">50dp</item>
-        <item name="android:layout_marginLeft">50dp</item>
-        <item name="android:background">@drawable/caixa_pesquisar</item>
-    </style>
-
 
     <style name="publicacao">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:layout_marginLeft">20dp</item>
         <item name="android:background">@drawable/caixa_publicacao</item>
     </style>
 
-
-
-    <style name="TextoLogin">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/caixatexto</item>
-        <item name="android:padding">10dp</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:layout_marginLeft">20dp</item>
-        <item name="android:layout_marginBottom">20dp</item>
+    <style name="criarMeme">
+        <item name="android:background">@drawable/criar_meme_circulo</item>
     </style>
+
+
+
 
 
     <style name="BotaoEntrar">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:layout_marginLeft">20dp</item>
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:padding">2dip</item>
+        <item name="android:layout_marginTop">10dp</item>
         <item name="android:background">@drawable/botao</item>
 
 
@@ -51,10 +39,15 @@
         <item name="android:layout_height">25dp</item>
         <item name="android:background">@drawable/botaofallow</item>
 
+    </style>
 
-
+    <style name="GoogleGithub">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:background">@drawable/google_github</item>
 
     </style>
+
 
 
     <style name="BotaoEditar">
@@ -70,9 +63,9 @@
         <item name="android:background">@drawable/caixa_pesquisar</item>
         <item name="android:padding">10dp</item>
         <item name="android:maxLength">20</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:layout_marginLeft">20dp</item>
-        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
     </style>
 
     <style name="fotoPerfil">
@@ -83,44 +76,72 @@
     <style name="caixa_usuario">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">90dp</item>
-        <item name="android:layout_margin">22dp</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
         <item name="android:background">@drawable/caixa_usuario</item>
     </style>
 
-    <style name="icon">
-        <item name="android:background">@drawable/sorrindo</item>
-    </style>
+
 
     <style name="definicoes">
-        <item name="android:layout_marginRight">5dp</item>
-        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
         <item name="android:background">@drawable/definicoes</item>
     </style>
-    <style name="DialogAnimation">
-        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
-        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
-    </style>
+
+
 
     <style name="popCriarMeme">
         <item name="android:layout_margin">22dp</item>
         <item name="android:layout_marginRight">20dp</item>
         <item name="android:layout_marginLeft">20dp</item>
-
         <item name="android:background">@drawable/caixa_usuario</item>
     </style>
+
+    <style name="StyledTilEditTextTheme">
+        <item name="colorControlNormal">@color/lilas</item> // Cor padrão da linha
+        <item name="colorControlActivated">@color/lilas</item> // Cor linha e texto quando recebe foco
+
+    </style>
+
+    <style name="StyledTilEditText">
+        <item name="android:theme">@style/StyledTilEditTextTheme</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
 
     <style name="comentario">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginLeft">50dp</item>
-        <item name="android:padding">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+
         <item name="android:background">@drawable/meu_comentario</item>
     </style>
 
 
+    <style name="privacidade">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:background">@drawable/privacidade</item>
+    </style>
+
+    <style name="senha">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:background">@drawable/senha</item>
+    </style>
+    <style name="btn_mudar_senha">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:background">@drawable/btn_mudar_senha</item>
+    </style>
 
 
 
