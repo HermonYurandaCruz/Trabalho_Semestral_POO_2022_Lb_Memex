@@ -3,67 +3,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cinza"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SettingFragment">
     <TextView
         android:id="@+id/tv_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:text="Definições"
+        android:textColor="@color/pretoTextos"
         android:textStyle="bold"
-        android:textColor="@color/lilas3"
-        android:textSize="22sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view"
-        style="@style/definicoes"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_setting"
-        tools:layout_editor_absoluteX="5dp" />
-
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_setting" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_perfilDef"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/foto_padrao_perfil"
-        app:layout_constraintStart_toStartOf="@id/tv_setting"
-         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintBottom_toBottomOf="@id/view"/>
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/perfil"
+        app:civ_border_color="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <TextView
         android:id="@+id/tv_nomeUsuarioDef"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/iv_perfilDef"
-        app:layout_constraintTop_toTopOf="@id/iv_perfilDef"
-        android:hint="Nome do usuario"
-        android:textSize="16dp"
         android:layout_marginStart="10dp"
-        />
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/pretoTextos"
+        android:text="Hermon da cruz"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_perfilDef"
+        app:layout_constraintTop_toTopOf="@id/iv_perfilDef" />
 
     <TextView
-        android:layout_width="250dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="10dp"
-        android:hint="Biografia.."
-        android:textSize="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_nomeUsuarioDef"
-        app:layout_constraintStart_toEndOf="@+id/iv_perfilDef"
-        app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuarioDef" />
+        android:id="@+id/tv_emailusuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="hermondacruz@gmail.com"
+        app:layout_constraintStart_toStartOf="@+id/tv_nomeUsuarioDef"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nomeUsuarioDef" />
 
+
+    <TextView
+        android:id="@+id/tv_seguir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seguindo"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_nomeUsuarioDef"
+        app:layout_constraintTop_toBottomOf="@+id/tv_numeroSeguindoDef" />
+
+    <TextView
+        android:id="@+id/tv_numeroSeguindoDef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/pretoTextos"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_seguir"
+        app:layout_constraintStart_toStartOf="@+id/tv_seguir"
+        app:layout_constraintTop_toBottomOf="@+id/tv_emailusuario" />
+
+    <TextView
+        android:id="@+id/tv_numeroDePostagens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publicações"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_seguidores"
+        app:layout_constraintStart_toEndOf="@+id/tv_seguir"
+        app:layout_constraintTop_toTopOf="@+id/tv_seguir" />
+
+    <TextView
+        android:id="@+id/tv_numeroPublicacoesDef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/pretoTextos"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_numeroDePostagens"
+        app:layout_constraintEnd_toEndOf="@+id/tv_numeroDePostagens"
+        app:layout_constraintStart_toStartOf="@+id/tv_numeroDePostagens"
+        app:layout_constraintTop_toBottomOf="@+id/tv_emailusuario" />
+
+    <TextView
+        android:id="@+id/tv_seguidores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seguidores"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nomeUsuarioDef"
+        app:layout_constraintTop_toTopOf="@+id/tv_seguir" />
+
+    <TextView
+        android:id="@+id/numeroSeguidoresDef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/pretoTextos"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tv_seguidores"
+        app:layout_constraintEnd_toEndOf="@+id/tv_seguidores"
+        app:layout_constraintStart_toStartOf="@+id/tv_seguidores"
+        app:layout_constraintTop_toBottomOf="@+id/tv_emailusuario" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="178dp"
         android:orientation="vertical">
 
 
@@ -72,47 +143,57 @@
             android:id="@+id/def_privacidade"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             style="@style/definicoes"
+            android:textSize="14sp"
             android:text="   Privacidade"
+            android:paddingStart="4dip"
             android:gravity="center_vertical"
-            android:drawableStart="@drawable/ic_privacidade_24"
+            android:drawableStart="@drawable/lock"
             />
         <TextView
             android:id="@+id/def_ecentos"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
             style="@style/definicoes"
+            android:paddingStart="4dip"
             android:text="   Eventos"
             android:gravity="center_vertical"
-            android:drawableStart="@drawable/ic_eventos_24"
+            android:drawableStart="@drawable/event"
             />
         <TextView
             android:id="@+id/def_suporte"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:paddingStart="4dip"
             style="@style/definicoes"
             android:text="   Comunicar um problema"
             android:gravity="center_vertical"
-            android:drawableStart="@drawable/ic_problema_24"
+            android:drawableStart="@drawable/warning"
             />
         <TextView
             android:id="@+id/def_ajuda"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
             style="@style/definicoes"
+            android:paddingStart="4dip"
             android:text="   Ajuda"
             android:gravity="center_vertical"
-            android:drawableStart="@drawable/ic_ajuda_24"
+            android:drawableStart="@drawable/help"
             />
         <TextView
             android:id="@+id/def_sobre"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
+            android:paddingStart="4dip"
+            android:textSize="14sp"
             style="@style/definicoes"
             android:text="   Sobre"
             android:gravity="center_vertical"
@@ -122,7 +203,9 @@
             android:id="@+id/def_sairdaconta"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
+            android:textSize="14sp"
+            android:paddingStart="4dip"
             style="@style/definicoes"
             android:text="   Terminar Sessão "
             android:gravity="center_vertical"
@@ -147,8 +230,8 @@
 
     </LinearLayout>
     <ImageView
-        android:layout_width="78dp"
-        android:layout_height="68dp"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
         android:src="@drawable/code_line"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

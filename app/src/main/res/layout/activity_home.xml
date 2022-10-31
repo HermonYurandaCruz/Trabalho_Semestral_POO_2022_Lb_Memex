@@ -15,7 +15,7 @@
         android:layout_gravity="bottom"
         android:background="@color/white"
         app:cnb_menuResource="@menu/navegarmemex"
-        app:cnb_iconSize="23dp"
+        app:cnb_iconSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@id/chipNavigation"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="42dp"
       />
 
 

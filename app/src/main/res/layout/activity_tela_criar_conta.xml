@@ -13,48 +13,61 @@ android:background="@color/white">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".NovoContratoCliente">
+
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Criar uma conta"
+        android:layout_marginTop="72dp"
+        android:textColor="@color/pretoTextos"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/et_usuarioNew"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="Memex"
         android:textColor="@color/lilas"
-        android:textSize="22sp"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="104dp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
         android:id="@+id/memeLogo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:src="@drawable/logo_memex"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="48dp"/>
+        android:layout_marginTop="32dp"/>
+
     <EditText
         android:id="@+id/et_usuarioNew"
-        style="@style/TextoLogin"
-        android:hint="Nome"
-        android:layout_marginTop="75dp"
+        style="@style/StyledTilEditText"
         android:drawableRight="@drawable/ic_perfil"
-        android:textSize="16sp"
-        android:textStyle="normal"
+        android:hint="Nome"
         android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/memeLogo"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
     <EditText
         android:id="@+id/et_emailNew"
-        style="@style/TextoLogin"
+        style="@style/StyledTilEditText"
         android:hint="E-mail"
         android:drawableRight="@drawable/ic_email"
-        android:layout_marginTop="25dp"
-        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
         android:textStyle="normal"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,12 +76,12 @@ android:background="@color/white">
         />
     <EditText
         android:id="@+id/et_senhaNew"
-        style="@style/TextoLogin"
+        style="@style/StyledTilEditText"
         android:hint="Senha"
         android:drawableRight="@drawable/ic_senha"
         android:inputType="textPassword"
-        android:textSize="16sp"
-        android:layout_marginTop="25dp"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
         android:textStyle="normal"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,12 +89,12 @@ android:background="@color/white">
         app:layout_constraintTop_toBottomOf="@id/et_emailNew"/>
     <EditText
         android:id="@+id/et_confirmar_senhaNew"
-        style="@style/TextoLogin"
+        style="@style/StyledTilEditText"
         android:hint="Confirmar Senha"
         android:drawableRight="@drawable/ic_senha"
         android:inputType="textPassword"
-        android:textSize="16sp"
-        android:layout_marginTop="25dp"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
         android:textStyle="normal"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,6 +107,7 @@ android:background="@color/white">
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_login"
         android:textSize="12sp"
+        android:layout_marginTop="42dp"
         android:text="Criar conta"
         android:textColor="@color/white"
         style="@style/BotaoEntrar"

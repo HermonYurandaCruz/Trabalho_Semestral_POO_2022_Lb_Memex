@@ -2,17 +2,17 @@
 
 package com.codeline.memex;
 
-        import android.os.Bundle;
-
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.fragment.app.Fragment;
-
-        import com.ismaeldivita.chipnavigation.ChipNavigationBar;
+import android.os.Bundle;
+import android.widget.ImageView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class Home extends AppCompatActivity {
 
     private ChipNavigationBar chipNavigationBar;
     private Fragment fragment = null;
+    private ImageView iv_curtida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,5 +52,6 @@ public class Home extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

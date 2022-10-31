@@ -18,10 +18,12 @@ public class MemeirosAdapter extends RecyclerView.Adapter<MemeirosHolder> {
 
     Context context;
     List<Memeiros> memeiros;
+    private OnItemClickedListener mListener;
 
-    public MemeirosAdapter(Context context, List<Memeiros> memeiros) {
+    public MemeirosAdapter(Context context, List<Memeiros> memeiros, OnItemClickedListener mListener) {
         this.context = context;
         this.memeiros = memeiros;
+        this.mListener = mListener;
     }
 
     @NonNull
@@ -38,7 +40,9 @@ public class MemeirosAdapter extends RecyclerView.Adapter<MemeirosHolder> {
         if(memeiros.getUrl_foto_perfil() != null)
             Glide.with(context).load(memeiros.getUrl_foto_perfil()).into(holder.imagem);
         holder.tv_nomeUsuario.setText(memeiros.getNome_usuario());
-
+        holder.itemView.setOnClickListener(View -> {
+            mListener.onItemClicked(memeiros);
+        });
     }
 
     @Override
@@ -46,5 +50,7 @@ public class MemeirosAdapter extends RecyclerView.Adapter<MemeirosHolder> {
         return memeiros.size();
     }
 
-
+    public interface OnItemClickedListener{
+        void onItemClicked(Memeiros memeiros);
+    }
 }

@@ -5,44 +5,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/cinza"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
+
+
 
         <TextView
             android:id="@+id/tv_publicacoes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_marginTop="16dp"
             android:text="@string/publicacao"
+            android:textColor="@color/pretoTextos"
             android:textStyle="bold"
-            android:textColor="@color/lilas3"
-            android:textSize="22sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/et_pesquisar"
-            style="@style/Pesquisa"
-            android:autofillHints="emailAddress"
-            android:layout_marginTop="10dp"
-            android:hint="Pesquisa"
-            android:drawableEnd="@drawable/ic_pesquisar24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_publicacoes"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/iv_criar_meme"
+        android:src="@drawable/add_circle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_publicacoes" />
+
+    <ImageView
+        android:id="@+id/iv_publigacaoGravada1"
+        style="@style/criarMeme"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/iv_criar_meme"
+        app:layout_constraintTop_toTopOf="@+id/iv_criar_meme" />
+
+    <ImageView
+        android:id="@+id/iv_publigacaoGravada2"
+        style="@style/criarMeme"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/iv_publigacaoGravada1"
+        app:layout_constraintTop_toTopOf="@+id/iv_criar_meme" />
 
 
+    <ImageView
+        android:id="@+id/iv_publigacaoGravada3"
+        style="@style/criarMeme"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/iv_publigacaoGravada2"
+        app:layout_constraintTop_toTopOf="@+id/iv_criar_meme"
+      />
+    <ImageView
+        android:id="@+id/iv_publigacaoGravada4"
+        style="@style/criarMeme"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/iv_publigacaoGravada3"
+        app:layout_constraintTop_toTopOf="@+id/iv_criar_meme"
+        />
 
-        <ScrollView
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar meme"
+        android:textSize="8sp"
+        android:textColor="@color/pretoTextos"
+        app:layout_constraintEnd_toEndOf="@+id/iv_criar_meme"
+        app:layout_constraintStart_toStartOf="@+id/iv_criar_meme"
+        app:layout_constraintTop_toBottomOf="@+id/iv_criar_meme" />
+
+    <ScrollView
     android:id="@+id/scolview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="100dp">
+    android:layout_marginTop="116dp">
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -56,15 +104,7 @@
 
 
 </ScrollView>
-        <ImageView
-            android:id="@+id/iv_criar_meme"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/ic_criar_meme"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

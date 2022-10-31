@@ -12,7 +12,7 @@
 
     <item android:id="@+id/memeiros"
         android:title="Memeiros"
-        android:icon="@drawable/ic_usuarios_24"
+        android:icon="@drawable/group"
         app:cnb_textColor="@color/lilas"
         app:cnb_backgroundColor="#dfcae1"
         app:cnb_iconColor="@color/lilas"
@@ -21,21 +21,21 @@
 
     <item android:id="@+id/ranking"
         android:title="Ranking "
-        android:icon="@drawable/ranking2"
+        android:icon="@drawable/star"
         app:cnb_textColor="@color/lilas"
         app:cnb_backgroundColor="#dfcae1"
         app:cnb_iconColor="@color/lilas"
         />
     <item android:id="@+id/notificacoes"
         android:title="Notificações"
-        android:icon="@drawable/ic_notifications_24"
+        android:icon="@drawable/notifications"
         app:cnb_textColor="@color/lilas"
         app:cnb_backgroundColor="#dfcae1"
         app:cnb_iconColor="@color/lilas"
         />
     <item android:id="@+id/setting"
         android:title="Definições"
-        android:icon="@drawable/ic_baseline_menu_24"
+        android:icon="@drawable/settings"
         app:cnb_textColor="@color/lilas"
         app:cnb_backgroundColor="#dfcae1"
         app:cnb_iconColor="@color/lilas"

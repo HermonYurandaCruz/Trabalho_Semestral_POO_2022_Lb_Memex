@@ -3,28 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/cinza"
     android:layout_height="match_parent"
     tools:context=".MeuPerfil">
     <TextView
         android:id="@+id/MeuPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="8dp"
-        android:text="Meu Perfil"
+        android:layout_marginTop="16dp"
+        android:text="Meu Perfil  "
+        android:drawableRight="@drawable/king"
+        android:textColor="@color/pretoTextos"
         android:textStyle="bold"
-        android:textColor="@color/lilas3"
-        android:textSize="16sp"
-        android:gravity="center_horizontal"
-        android:drawableStart="@drawable/ic_voltar_24"
-
-        />
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="183dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -33,249 +34,177 @@
             tools:context=".NovoContratoCliente">
 
 
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/foto"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:src="@drawable/hermon"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:civ_border_width="2dp"
-                android:layout_marginTop="50dp"
-                app:civ_border_color="@color/white"
-                />
-
             <TextView
-                android:id="@+id/tv_nomeUsuario"
+                android:id="@+id/tv_editar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Nome do usuário"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/foto"
-                />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/bt_editar"
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:layout_marginTop="5dp"
-                style="@style/BotaoEditar"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:drawableRight="@drawable/ic_edit_24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_nomeUsuario"
-                android:hint="    Editar"
-                android:gravity="center"/>
+                android:text="editar"
+                android:textColor="@color/lilas"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/iv_perfil_meuPerfil"
+                app:layout_constraintStart_toStartOf="@+id/iv_perfil_meuPerfil"
+                app:layout_constraintTop_toBottomOf="@+id/iv_perfil_meuPerfil" />
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_perfil_meuPerfil"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/perfil"
+                app:civ_border_color="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_nomeUsuarioMeuPerfil"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Nome do usuário"
+                android:textColor="@color/pretoTextos"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iv_perfil_meuPerfil"
+                app:layout_constraintTop_toTopOf="@id/iv_perfil_meuPerfil" />
 
 
             <TextView
                 android:id="@+id/tv_biografia"
-                android:layout_width="match_parent"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Sonhos sao apenas uma mensgaem que a nossa mente tras sobre o que mais queremos..."
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="24dp"
-                app:layout_constraintTop_toBottomOf="@+id/bt_editar" />
-
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/tv_seguir"
+                app:layout_constraintTop_toBottomOf="@+id/tv_seguir" />
 
             <TextView
                 android:id="@+id/tv_seguir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="A seguir"
-                android:textSize="14sp"
-                android:layout_marginStart="20dp"
-                app:layout_constraintStart_toStartOf="@+id/tv_biografia"
-                app:layout_constraintTop_toBottomOf="@id/tv_biografia" />
+                android:layout_marginTop="24dp"
+                android:text="Seguindo"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_nomeUsuarioMeuPerfil"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nomeUsuarioMeuPerfil" />
 
 
             <TextView
+                android:id="@+id/tv_numeroSeguindoMeuPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100"
-                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:text="0"
+                android:textColor="@color/pretoTextos"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_seguir"
                 app:layout_constraintEnd_toEndOf="@+id/tv_seguir"
                 app:layout_constraintStart_toStartOf="@+id/tv_seguir"
-                app:layout_constraintTop_toBottomOf="@id/tv_seguir" />
-
+                app:layout_constraintTop_toBottomOf="@+id/tv_nomeUsuarioMeuPerfil"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/tv_numeroDePostagens"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Posts"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_biografia" />
+                android:text="Publicações"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_seguidores"
+                app:layout_constraintStart_toEndOf="@+id/tv_seguir"
+                app:layout_constraintTop_toTopOf="@+id/tv_seguir" />
 
             <TextView
+                android:id="@+id/tv_numeroPublicacoesMeuPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="12sp"
+                android:text="0"
+                android:textColor="@color/pretoTextos"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_numeroDePostagens"
                 app:layout_constraintEnd_toEndOf="@+id/tv_numeroDePostagens"
                 app:layout_constraintStart_toStartOf="@+id/tv_numeroDePostagens"
-                app:layout_constraintTop_toBottomOf="@id/tv_numeroDePostagens" />
+                app:layout_constraintTop_toTopOf="@+id/tv_numeroSeguindoMeuPerfil" />
 
             <TextView
                 android:id="@+id/tv_seguidores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:text="Seguidores"
-                android:textSize="14sp"
-                android:layout_marginEnd="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_biografia"
-                app:layout_constraintTop_toBottomOf="@id/tv_biografia"
-                />
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nomeUsuarioMeuPerfil"
+                app:layout_constraintTop_toTopOf="@+id/tv_seguir" />
 
             <TextView
+                android:id="@+id/tv_numeroSeguidoresMeuPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5000"
-                android:textSize="12sp"
+                android:text="0"
+                android:textColor="@color/pretoTextos"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_seguidores"
                 app:layout_constraintEnd_toEndOf="@+id/tv_seguidores"
                 app:layout_constraintStart_toStartOf="@+id/tv_seguidores"
-                app:layout_constraintTop_toBottomOf="@id/tv_seguidores" />
+                app:layout_constraintTop_toTopOf="@+id/tv_numeroPublicacoesMeuPerfil" />
+
 
             <TextView
                 android:id="@+id/Top3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Meu Top 3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_seguir"
-                android:textSize="14sp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                />
-            <ScrollView
-                android:id="@+id/bestPost"
-                android:layout_width="wrap_content"
-                android:layout_height="130dp"
-                android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Top3"
-                >
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:id="@+id/iv_top1"
-                        android:layout_width="150dp"
-                        android:layout_height="100dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_margin="20dp"
-                        android:background="@color/lilas"
-                        />
-
-                    <ImageView
-                        android:id="@+id/iv_top2"
-                        android:layout_width="150dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="20dp"
-                        android:background="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/iv_top1"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.609" />
-
-                    <ImageView
-                        android:id="@+id/iv_top3"
-                        android:layout_width="150dp"
-                        android:layout_height="100dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/iv_top2"
-                        android:layout_margin="20dp"
-                        android:background="@color/amarelo3"
-                        />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </ScrollView>
-
+                android:text="Top 3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/iv_perfil_meuPerfil"
+                app:layout_constraintTop_toBottomOf="@+id/tv_biografia" />
 
 
             <ImageView
-                android:id="@+id/iv_perfil_publicacao"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/foto_padrao_perfil"
-                app:layout_constraintTop_toBottomOf="@id/bestPost"
+                android:id="@+id/iv_top1"
+                style="@style/criarMeme"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/Top3" />
 
-                />
+            <ImageView
+                android:id="@+id/iv_top2"
+                style="@style/criarMeme"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_top3"
+                app:layout_constraintStart_toEndOf="@+id/iv_top1"
+                app:layout_constraintTop_toTopOf="@+id/iv_top1" />
 
-            <TextView
-                android:id="@+id/tv_usuario_publicacao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="36dp"
-                android:text="Camila Miguel"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="normal"
-                app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
-                app:layout_constraintTop_toBottomOf="@id/bestPost" />
-
-
-            <TextView
-                android:id="@+id/tv_Data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginBottom="16dp"
-                android:text="Data: 14/09/2022   17:33H"
-                android:textSize="10sp"
-                app:layout_constraintBottom_toTopOf="@id/publicado"
-                app:layout_constraintStart_toEndOf="@id/iv_perfil_publicacao"
-
-                app:layout_constraintTop_toBottomOf="@+id/tv_usuario_publicacao" />
-
-            <View
-                android:id="@+id/publicado"
-                style="@style/publicacao"
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:layout_marginStart="20dp"
+            <ImageView
+                android:id="@+id/iv_top3"
+                style="@style/criarMeme"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_perfil_publicacao" />
+                app:layout_constraintTop_toTopOf="@+id/iv_top2" />
 
 
-
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclervirew_minhas_publicacoes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/iv_top1"
+                tools:layout_editor_absoluteX="-16dp" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
     </ScrollView>

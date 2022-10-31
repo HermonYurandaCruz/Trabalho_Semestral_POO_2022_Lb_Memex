@@ -104,9 +104,9 @@ public class CriarMeme extends AppCompatActivity {
 
                  if(TextoMeme.isEmpty()&& linkfoto.isEmpty() ) {
                      Toast.makeText(CriarMeme.this, "Escreva um texto ou adicione uma foto", Toast.LENGTH_SHORT).show();
-                 } else
-                 Publicacao(TextoMeme,"www.com.codeLine");
-
+                 } else {
+                     Publicacao(TextoMeme, "www.com.codeLine");
+                 }
              }
          });
 
@@ -136,6 +136,7 @@ public class CriarMeme extends AppCompatActivity {
         String rute_storage_photo = storage_path + "" + photo + "" + mAuth.getUid() +""+ id.getId();
 
         Map<String, Object> map = new HashMap<>();
+        map.put("nome_usuario", mAuth.getCurrentUser().getDisplayName());
         map.put("id_usuario", idUser);
         map.put("id_post", id.getId());
         map.put("data",data);

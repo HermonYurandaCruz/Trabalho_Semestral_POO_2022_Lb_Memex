@@ -4,82 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cinza"
     tools:context=".EditarMeuPerfil">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:layout_marginBottom="350dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/EditarMeuPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="8dp"
-        android:text="Editar"
+        android:layout_marginTop="16dp"
+        android:text="Editar Perfil"
+        android:textColor="@color/pretoTextos"
         android:textStyle="bold"
-        android:textColor="@color/lilas3"
-        android:textSize="16sp"
-        android:gravity="center_horizontal"
-        android:drawableStart="@drawable/ic_voltar_24"
-
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
         />
 
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_editarFoto"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:src="@drawable/hermon"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/iv_fotoPerfilEditar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintTop_toBottomOf="@+id/EditarMeuPerfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:civ_border_width="2dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         app:civ_border_color="@color/white"
         />
 
+
+    <ImageView
+        android:id="@+id/iv_editarFoto"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/ic_edit_24"
+        app:layout_constraintEnd_toEndOf="@+id/iv_fotoPerfilEditar"
+        app:layout_constraintTop_toTopOf="@+id/iv_fotoPerfilEditar" />
+
     <EditText
         android:id="@+id/et_editarNomeUsuario"
-        android:layout_width="wrap_content"
+        style="@style/StyledTilEditText"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:hint="editar o nome"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Nome do usuario"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_editarFoto"
-        />
-
+        app:layout_constraintTop_toBottomOf="@+id/iv_fotoPerfilEditar" />
 
     <EditText
         android:id="@+id/et_editarbiografia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Actualizar a Biografia"
         android:layout_marginTop="10dp"
+       style="@style/StyledTilEditText"
+        android:textSize="14sp"
+        android:hint="Biografia"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_editarNomeUsuario"
+        app:layout_constraintStart_toStartOf="@+id/et_editarNomeUsuario"
+        app:layout_constraintTop_toBottomOf="@id/et_editarNomeUsuario" />
+
+
+    <EditText
+        android:id="@+id/et_AddContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/StyledTilEditText"
+        android:hint="Adicionar Contacto"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_editarNomeUsuario"
+        app:layout_constraintTop_toBottomOf="@id/et_editarbiografia" />
+
+    <EditText
+        android:id="@+id/et_AddDataNascimento"
+        style="@style/StyledTilEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Data de Nascimento"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-     />
+        app:layout_constraintTop_toBottomOf="@id/et_AddContacto" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_concluir"
-        app:layout_constraintTop_toBottomOf="@id/et_editarbiografia"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
         style="@style/BotaoEntrar"
         android:text="concluir"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rb_femenino" />
+
+
+    <RadioButton
+        android:id="@+id/rb_masculino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maculino"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/et_AddDataNascimento"
+        app:layout_constraintTop_toBottomOf="@+id/et_AddDataNascimento"
+        />
+
+    <RadioButton
+        android:id="@+id/rb_femenino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:text="Femenino"
+        app:layout_constraintStart_toStartOf="@+id/et_AddDataNascimento"
+        app:layout_constraintTop_toBottomOf="@+id/rb_masculino" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

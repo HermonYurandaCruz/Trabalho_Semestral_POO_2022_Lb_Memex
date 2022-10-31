@@ -9,15 +9,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class HomeHolder extends RecyclerView.ViewHolder {
 
-//    TextView tv_nome_publicacao;
+    TextView tv_nome_publicacao;
     TextView tv_texto_publicacao;
     ImageView imagem_publicacao;
 
 
     public HomeHolder(@NonNull View itemView) {
         super(itemView);
-//        tv_nome_publicacao = itemView.findViewById(R.id.tv_usuario_publicacao);
+        tv_nome_publicacao = itemView.findViewById(R.id.tv_usuario_publicacao);
         tv_texto_publicacao = itemView.findViewById(R.id.tv_textoMeme);
-        imagem_publicacao = itemView.findViewById(R.id.iv_post);
+        imagem_publicacao = itemView.findViewById(R.id.iv_publicacao);
     }
 }

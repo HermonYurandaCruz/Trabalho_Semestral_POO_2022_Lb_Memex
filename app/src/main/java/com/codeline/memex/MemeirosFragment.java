@@ -1,5 +1,6 @@
 package com.codeline.memex;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.codeline.memex.model.Memeiros;
 import com.google.firebase.firestore.DocumentChange;
@@ -47,10 +49,18 @@ public class MemeirosFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerview_memeiros);
+        recyclerView = view.findViewById(R.id.recyclerview_memeiros);
         dbfirebase = FirebaseFirestore.getInstance();
         memeiros = new ArrayList<>();
-        adapter = new MemeirosAdapter(this.getContext(), memeiros);
+        adapter = new MemeirosAdapter(this.getContext(), memeiros, new MemeirosAdapter.OnItemClickedListener() {
+            @Override
+            public void onItemClicked(Memeiros memeiros) {
+//                Toast.makeText(getContext(), memeiros.getNome_usuario(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), PerfilUsuarios.class);
+                intent.putExtra("memeiros", memeiros);
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(adapter);
         EventChangeListener();
 
@@ -76,6 +86,8 @@ public class MemeirosFragment extends Fragment {
 
                 });
     }
+    //method on create view
+
 
 
 }

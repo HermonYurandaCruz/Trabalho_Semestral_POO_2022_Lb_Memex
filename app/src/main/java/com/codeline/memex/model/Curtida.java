@@ -1,4 +1,6 @@
 package com.codeline.memex.model;
 
-public class Curtida {
+import java.io.Serializable;
+
+public class Curtida implements Serializable {
 }

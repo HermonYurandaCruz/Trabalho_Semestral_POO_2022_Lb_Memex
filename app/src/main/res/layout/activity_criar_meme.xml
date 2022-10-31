@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cinza"
     tools:context=".CriarMeme">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,64 +15,48 @@
                 android:id="@+id/tv_criarMeme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="40dp"
-                android:fontFamily="sans-serif-condensed-medium"
                 android:text="Criar Meme"
+                android:textColor="@color/pretoTextos"
+                android:layout_marginTop="16dp"
                 android:textStyle="bold"
-                android:textColor="@color/lilas3"
-                android:textSize="22sp"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-
             <EditText
-                android:background="@android:color/transparent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:id="@+id/et_meme"
-                android:layout_width="match_parent"
+                android:background="@android:color/transparent"                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:drawableRight="@drawable/ic_edit_24"
+                android:textSize="14sp"
+                android:layout_marginTop="70dp"
+                android:drawableRight="@drawable/short_text"
                 android:hint="Escreva o seu meme aqui..."
-                android:layout_marginTop="30dp"
                 app:layout_constraintStart_toStartOf="@+id/iv_galeria"
-                app:layout_constraintTop_toBottomOf="@+id/tv_criarMeme"
-
-                />
+                app:layout_constraintTop_toTopOf="@+id/tv_criarMeme" />
 
             <ImageView
                 android:id="@+id/imagem_meme"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:src="@drawable/stuck"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintTop_toBottomOf="@id/et_meme"
-                app:layout_constraintStart_toStartOf="@id/et_meme"
-                />
+                style="@style/publicacao"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_galeria"
+                app:layout_constraintStart_toEndOf="@+id/iv_galeria"
+                app:layout_constraintTop_toTopOf="@+id/iv_galeria" />
 
             <ImageView
                 android:id="@+id/iv_galeria"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                app:layout_constraintTop_toBottomOf="@id/imagem_meme"
-                android:src="@drawable/ic_galeria_de_fotos_24"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/add_photo_alternate"
                 app:layout_constraintStart_toStartOf="@id/et_meme"
-                android:layout_marginTop="16dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Adicionar Imagem"
-                android:textSize="14sp"
-                app:layout_constraintStart_toEndOf="@id/iv_galeria"
-                app:layout_constraintTop_toTopOf="@id/iv_galeria"
-                app:layout_constraintBottom_toBottomOf="@id/iv_galeria"
-                android:layout_marginStart="5dp"/>
+                app:layout_constraintTop_toBottomOf="@+id/et_meme" />
+
 
             <ImageView
                 android:id="@+id/iv_link"
@@ -80,28 +65,54 @@
                 android:src="@drawable/ic_link_24"
                 app:layout_constraintStart_toStartOf="@id/iv_galeria"
                 app:layout_constraintTop_toBottomOf="@id/iv_galeria"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                  />
+
             <TextView
+                android:id="@+id/tv_adicionarLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:hint="Adicionar Link"
                 android:textSize="14sp"
-                app:layout_constraintStart_toEndOf="@id/iv_link"
-                app:layout_constraintTop_toTopOf="@id/iv_link"
                 app:layout_constraintBottom_toBottomOf="@id/iv_link"
-                android:layout_marginStart="5dp"/>
+                app:layout_constraintStart_toEndOf="@id/iv_link"
+                app:layout_constraintTop_toTopOf="@id/iv_link" />
+
+            <ImageView
+                android:id="@+id/iv_gravar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/save"
+                app:layout_constraintStart_toStartOf="@+id/iv_link"
+                app:layout_constraintTop_toBottomOf="@+id/iv_link" />
+
+            <TextView
+                android:id="@+id/tv_agravarMeme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:hint="Guardar meme"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_gravar"
+                app:layout_constraintStart_toEndOf="@id/iv_gravar"
+                app:layout_constraintTop_toTopOf="@id/iv_gravar" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/bt_publicar"
-                android:textSize="12sp"
+                style="@style/BotaoEntrar"
+                android:layout_marginBottom="20dp"
                 android:text="Publicar"
                 android:textColor="@color/white"
-                style="@style/BotaoEntrar"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/et_meme"
                 app:layout_constraintStart_toStartOf="@id/et_meme"
-                app:layout_constraintTop_toBottomOf="@id/iv_link"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/iv_gravar" />
+
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
