@@ -13,6 +13,7 @@ public class MemeirosHolder extends RecyclerView.ViewHolder {
     TextView tv_seguir;
     ImageView imagem;
 
+
     public MemeirosHolder(@NonNull View itemView) {
         super(itemView);
         tv_nomeUsuario = itemView.findViewById(R.id.tv_nomeSeguir);

@@ -41,6 +41,7 @@ public class  HomeFragment extends Fragment {
     private FirebaseFirestore dbfirebase;
     private List<Publicacao> publicacoes;
     private RecyclerView recyclerView;
+    private ImageView iv_comentar;
 
     private androidx.appcompat.widget.AppCompatButton botaoFollow;
     @Override
@@ -88,21 +89,28 @@ public class  HomeFragment extends Fragment {
 //
 //                intent.getExtras().get()
                 iv_curtida = recyclerView.findViewById(R.id.iv_reagir_meme);
+                iv_comentar = recyclerView.findViewById(R.id.iv_comentar_meme);
                 iv_curtida.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         escolherReaccao(v);
-//                        Toast.makeText(getContext(), "S", Toast.LENGTH_LONG).show();
                     }
                 });
 //                showToasty(publicacao.getTexto_publicacao() + " clicado" + recyclerView.findViewById(R.id.iv_comentar_meme));
+                iv_comentar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), ComentarMeme.class);
+                        intent.putExtra("id_publicacao", publicacao.getId_post());
+                        startActivity(intent);
+                    }
+                });
             }
         });
         recyclerView.setAdapter(adapter);
 
         EventChangeListener();
     }
-//TODO: fazer correcao de bug quando postas não aparece foto
     private void EventChangeListener(){
         dbfirebase.collection("publicacao").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
