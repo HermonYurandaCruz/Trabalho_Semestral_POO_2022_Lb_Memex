@@ -45,6 +45,7 @@ public class TelaLogin extends AppCompatActivity {
     private GoogleSignInClient client;
     private TextView tv_google;
     private FirebaseFirestore dbFirestore;
+    private TextView tv_github;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +72,7 @@ public class TelaLogin extends AppCompatActivity {
         tv_EsqueceuSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(TelaLogin.this, RecuperarSenha.class));
             }
         });
 
@@ -94,6 +95,14 @@ public class TelaLogin extends AppCompatActivity {
                 startActivityForResult(intent, 1234);
             }
         });
+
+        tv_github.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(TelaLogin.this, TelaLoginGithub.class);
+//                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -109,7 +118,7 @@ public class TelaLogin extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    if(!dbFirestore.collection("email").equals(mAuth.getCurrentUser().getEmail()))
+                                    if(!dbFirestore.collection("usuario").document("email").equals(mAuth.getCurrentUser().getEmail()))
                                         salvarUsuarioNoFirestore();
                                     Intent intent = new Intent(getApplicationContext(), Home.class);
                                     startActivity(intent);
@@ -130,7 +139,7 @@ public class TelaLogin extends AppCompatActivity {
         Map<String, Object> usuario = new HashMap<>();
         usuario.put("email", mAuth.getCurrentUser().getEmail().toString());
         usuario.put("nome_usuario", mAuth.getCurrentUser().getDisplayName());
-//        usuario.put("token", mAuth)
+        usuario.put("id_usuario", mAuth.getCurrentUser().getUid());
         usuario.put("url_foto_perfil", mAuth.getCurrentUser().getPhotoUrl().toString());
         dbFirestore.collection("usuario")
                 .add(usuario)
@@ -163,6 +172,7 @@ public class TelaLogin extends AppCompatActivity {
         tv_criarConta=findViewById(R.id.tv_criar_conta);
         tv_EsqueceuSenha = findViewById(R.id.tv_esquecu_senha);
         tv_google = findViewById(R.id.tv_google);
+        tv_github = findViewById(R.id.tv_gitHub);
     }
 
     private void iniciarSessao(){

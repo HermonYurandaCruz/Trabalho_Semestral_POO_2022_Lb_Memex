@@ -48,7 +48,7 @@ public class CriarMeme extends AppCompatActivity {
     private Uri image_url;
     String photo = "photo";
     String idd;
-    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm/ddMM/yyyy", Locale.getDefault());
+    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm/dd/MM/yyyy", Locale.getDefault());
     String data = sdf.format(new Date());
 
 
