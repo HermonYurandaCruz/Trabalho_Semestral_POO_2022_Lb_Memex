@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:gravity="center_horizontal"
     android:layout_height="match_parent"
-    tools:context=".popUpReacoes">
+    tools:context=".ui.popUpReacoes">
     <LinearLayout
         android:orientation="horizontal"
         android:background="@drawable/caixa_publicacao"

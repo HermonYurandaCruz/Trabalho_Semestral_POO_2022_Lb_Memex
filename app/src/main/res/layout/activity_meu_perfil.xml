@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/cinza"
     android:layout_height="match_parent"
-    tools:context=".MeuPerfil">
+    tools:context=".ui.MeuPerfil">
     <TextView
         android:id="@+id/MeuPerfil"
         android:layout_width="wrap_content"

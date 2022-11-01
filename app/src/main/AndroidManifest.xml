@@ -12,89 +12,86 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MemeX">
         <activity
-            android:name=".RecuperarSenha"
+            android:name=".ui.RecuperarSenha"
             android:exported="false" />
         <activity
-            android:name=".ActualizarInformacaoPessoal"
+            android:name=".ui.ActualizarInformacaoPessoal"
             android:exported="false" />
         <activity
-            android:name=".MudarSenha"
+            android:name=".ui.MudarSenha"
             android:exported="false" />
         <activity
-            android:name=".Privacidade"
+            android:name=".ui.Privacidade"
             android:exported="false" />
         <activity
-            android:name=".ComentarMeme"
+            android:name=".ui.ComentarMeme"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Pesquisar"
+            android:name=".ui.Pesquisar"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".EditarMeuPerfil"
+            android:name=".ui.EditarMeuPerfil"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ActivityRecuperarSenha"
+            android:name=".ui.CriarMeme"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.MeuPerfil"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.PerfilUsuarios"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.popUpReacoes"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.BemVindo"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.TelaCriarConta"
             android:exported="false" />
         <activity
-            android:name=".CriarMeme"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MeuPerfil"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".PerfilUsuarios"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".popUpReacoes"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".BemVindo"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".TelaCriarConta"
-            android:exported="false" />
-        <activity
-            android:name=".Home"
+            android:name=".ui.Home"
             android:exported="false"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".TelaLogin"
+            android:name=".ui.TelaLogin"
             android:exported="false"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
